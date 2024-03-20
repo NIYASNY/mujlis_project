@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_for_college/controller/authcontroller.dart';
+import 'package:ui_for_college/app/auth/controller/authcontroller.dart';
 
 const PrimaryColor = Color.fromARGB(255, 5, 226, 78);
 

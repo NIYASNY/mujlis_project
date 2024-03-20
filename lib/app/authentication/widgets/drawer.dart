@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:ui_for_college/utils/constants.dart';
+import 'package:ui_for_college/app/utils/constants.dart';
 
 class EndDrawer extends StatelessWidget {
   const EndDrawer({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_for_college/auth/widgets/appcolors.dart';
+import 'package:ui_for_college/app/auth/widgets/appcolors.dart';
 
 class PrimaryButton extends StatefulWidget {
   final VoidCallback onTap;

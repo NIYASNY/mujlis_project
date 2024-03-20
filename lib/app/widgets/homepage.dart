@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/authentication/widgets/detailspage.dart';
-import 'package:ui_for_college/authentication/widgets/drawer.dart';
-import 'package:ui_for_college/utils/constants.dart';
-import 'package:ui_for_college/widgets/profileview.dart';
-import 'package:ui_for_college/widgets/seeallpage.dart';
+import 'package:ui_for_college/app/authentication/widgets/detailspage.dart';
+import 'package:ui_for_college/app/authentication/widgets/drawer.dart';
+import 'package:ui_for_college/app/utils/constants.dart';
+import 'package:ui_for_college/app/widgets/profileview.dart';
+import 'package:ui_for_college/app/widgets/seeallpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({

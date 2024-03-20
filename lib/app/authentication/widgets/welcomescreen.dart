@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/controller/authcontroller.dart';
+import 'package:ui_for_college/app/auth/controller/authcontroller.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});

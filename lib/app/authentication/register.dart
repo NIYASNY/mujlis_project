@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/authentication/signin.dart';
-import 'package:ui_for_college/authentication/widgets/imagelogo.dart';
-import 'package:ui_for_college/utils/constants.dart';
+import 'package:ui_for_college/app/authentication/signin.dart';
+import 'package:ui_for_college/app/authentication/widgets/imagelogo.dart';
+import 'package:ui_for_college/app/utils/constants.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

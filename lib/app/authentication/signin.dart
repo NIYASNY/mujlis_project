@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/authentication/register.dart';
-import 'package:ui_for_college/authentication/widgets/imagelogo.dart';
-import 'package:ui_for_college/utils/constants.dart';
+import 'package:ui_for_college/app/authentication/register.dart';
+import 'package:ui_for_college/app/authentication/widgets/imagelogo.dart';
+import 'package:ui_for_college/app/utils/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_for_college/auth/signup.dart';
+import 'package:ui_for_college/app/auth/signup.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

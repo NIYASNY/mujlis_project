@@ -179,9 +179,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:ui_for_college/widgets/assetfolder.dart';
-import 'package:ui_for_college/widgets/homepage.dart';
-import 'package:ui_for_college/widgets/signin_button.dart';
+import 'package:ui_for_college/app/widgets/assetfolder.dart';
+import 'package:ui_for_college/app/widgets/homepage.dart';
+import 'package:ui_for_college/app/widgets/signin_button.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
