@@ -28,30 +28,28 @@ class EndDrawer extends StatelessWidget {
                   size: 60,
                   color: Colors.white,
                 ),
-                // const SizedBox(
-                //   height: 10,
-                // ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '${authcontroller.user!.email}',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: () {
-                          authcontroller.signOut();
-                        },
-                        icon: Icon(Icons.logout))
-                  ],
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  '${authcontroller.user!.email}',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 )
               ],
             ),
           ),
+          const Spacer(),
+          ListTile(
+            onTap: () {
+              authcontroller.signOut();
+            },
+            leading: const Icon(Icons.logout),
+            title: const Text('Logout'),
+          )
         ],
       ),
     );

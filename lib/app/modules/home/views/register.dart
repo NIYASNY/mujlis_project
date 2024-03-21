@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/authentication/signin.dart';
+import 'package:ui_for_college/app/modules/home/controller/authcontroller.dart';
+import 'package:ui_for_college/app/modules/home/views/signin.dart';
 import 'package:ui_for_college/app/authentication/widgets/imagelogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
@@ -14,6 +15,7 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   final formKey = GlobalKey<FormState>();
 
+  final AuthController authController = AuthController.instance;
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -92,8 +94,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               if (formKey.currentState!.validate()) {
                                 print('Ok');
                                 final result = await authcontroller.register(
-                                    emailController.text,
-                                    passwordController.text);
+                                    emailController.text.trim(),
+                                    passwordController.text.trim());
                                 if (!result) {
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(const SnackBar(
@@ -124,7 +126,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         },
                         child: const Text(
                           'Login Now',
-                          style: TextStyle(color: Color.fromARGB(255, 5, 226, 78),),
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 5, 226, 78),
+                          ),
                         ),
                       ),
                     ],

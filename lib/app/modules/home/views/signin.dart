@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/authentication/register.dart';
+import 'package:ui_for_college/app/modules/home/controller/authcontroller.dart';
+import 'package:ui_for_college/app/modules/home/views/register.dart';
 import 'package:ui_for_college/app/authentication/widgets/imagelogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
@@ -14,6 +15,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final formKey = GlobalKey<FormState>();
+
+  final AuthController authController = AuthController.instance;
   final emailcontroller = TextEditingController();
   final passcontroller = TextEditingController();
 
@@ -93,8 +96,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 if (formKey.currentState!.validate()) {
                                   print('ok');
                                   final result = await authcontroller.signIn(
-                                      emailcontroller.text,
-                                      passcontroller.text);
+                                      emailcontroller.text.trim(),
+                                      passcontroller.text.trim());
                                   if (!result) {
                                     ScaffoldMessenger.of(context)
                                         .showSnackBar(const SnackBar(
