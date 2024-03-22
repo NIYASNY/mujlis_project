@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ui_for_college/app/authentication/widgets/drawer.dart';
-import 'package:ui_for_college/app/modules/home/views/officepage.dart';
-import 'package:ui_for_college/app/modules/home/views/staffpage.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
-import 'package:ui_for_college/app/view/bankscreens/bankname.dart';
 import 'package:ui_for_college/app/view/bankwidgets/bottomnavigation.dart';
+import 'package:ui_for_college/app/view/libraryscreen/library_home.dart';
+import 'package:ui_for_college/app/view/office/officehome.dart';
+import 'package:ui_for_college/app/view/staff/staffhome.dart';
+import 'package:ui_for_college/app/view/union/unionhome.dart';
 import 'package:ui_for_college/app/widgets/seeallpage.dart';
 
 class AdminPage extends StatefulWidget {
@@ -162,7 +163,7 @@ class _AdminPageState extends State<AdminPage> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        OfficePage()));
+                                                        OfficeHomePage()));
                                           },
                                         ),
                                         _buildSquare(
@@ -173,7 +174,7 @@ class _AdminPageState extends State<AdminPage> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        StaffPage()));
+                                                        StaffHomePage()));
                                           },
                                         ),
                                       ],
@@ -182,8 +183,13 @@ class _AdminPageState extends State<AdminPage> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(
-                                            Icons.group, 'Union', () {}),
+                                        _buildSquare(Icons.group, 'Union', () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      unionHomePage()));
+                                        }),
                                         _buildSquare(
                                             Icons.apartment, 'Hostel', () {}),
                                       ],
@@ -192,8 +198,13 @@ class _AdminPageState extends State<AdminPage> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(
-                                            Icons.book, 'Library', () {}),
+                                        _buildSquare(Icons.book, 'Library', () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      LibraryScreenHome()));
+                                        }),
                                         _buildSquare(
                                             Icons.fastfood, 'Canteen', () {}),
                                       ],
