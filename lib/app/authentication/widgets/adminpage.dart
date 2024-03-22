@@ -8,6 +8,8 @@ import 'package:ui_for_college/app/authentication/widgets/drawer.dart';
 import 'package:ui_for_college/app/modules/home/views/officepage.dart';
 import 'package:ui_for_college/app/modules/home/views/staffpage.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
+import 'package:ui_for_college/app/view/bankscreens/bankname.dart';
+import 'package:ui_for_college/app/view/bankwidgets/bottomnavigation.dart';
 import 'package:ui_for_college/app/widgets/seeallpage.dart';
 
 class AdminPage extends StatefulWidget {
@@ -200,8 +202,14 @@ class _AdminPageState extends State<AdminPage> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(Icons.account_balance,
-                                            'Bank', () {}),
+                                        _buildSquare(
+                                            Icons.account_balance, 'Bank', () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      BankBottom()));
+                                        }),
                                         _buildSquare(
                                             Icons.more_horiz, 'More', () {}),
                                       ],

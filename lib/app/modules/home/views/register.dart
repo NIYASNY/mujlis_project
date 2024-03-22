@@ -41,7 +41,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
             child: Column(
               children: [
                 const ImageLogo(),
-                // const TodoLogo(),
+                SizedBox(
+                  height: 20,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
@@ -76,43 +78,51 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
                 Obx(() {
-                  return Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.all(8.0),
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: authcontroller.isAuthenticating
-                          ? PrimaryColor
-                          : PrimaryColor,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: authcontroller.isAuthenticating
-                        ? const Center(child: CircularProgressIndicator())
-                        : MaterialButton(
-                            onPressed: () async {
-                              FocusManager.instance.primaryFocus?.unfocus();
-                              if (formKey.currentState!.validate()) {
-                                print('Ok');
-                                final result = await authcontroller.register(
-                                    emailController.text.trim(),
-                                    passwordController.text.trim());
-                                if (!result) {
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(const SnackBar(
-                                    content: Text('Something went wrong'),
-                                    backgroundColor: Colors.red,
-                                  ));
-                                }
-                              } else {
-                                print('Not ok');
-                              }
-                            },
-                            child: const Text(
-                              'Register',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                          ),
+                  return Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        margin: const EdgeInsets.all(8.0),
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: authcontroller.isAuthenticating
+                              ? PrimaryColor
+                              : PrimaryColor,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: authcontroller.isAuthenticating
+                            ? const Center(child: CircularProgressIndicator())
+                            : MaterialButton(
+                                onPressed: () async {
+                                  FocusManager.instance.primaryFocus?.unfocus();
+                                  if (formKey.currentState!.validate()) {
+                                    print('Ok');
+                                    final result =
+                                        await authcontroller.register(
+                                            emailController.text.trim(),
+                                            passwordController.text.trim());
+                                    if (!result) {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(const SnackBar(
+                                        content: Text('Something went wrong'),
+                                        backgroundColor: Colors.red,
+                                      ));
+                                    }
+                                  } else {
+                                    print('Not ok');
+                                  }
+                                },
+                                child: const Text(
+                                  'Register',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20),
+                                ),
+                              ),
+                      ),
+                    ],
                   );
                 }),
                 Padding(

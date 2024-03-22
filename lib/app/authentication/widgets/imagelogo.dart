@@ -8,11 +8,11 @@ class ImageLogo extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 100,
+          height: 70,
         ),
         Image.network(
           "https://www.48hourslogo.com/48hourslogo_data/2015/07/15/201507151540519778.jpg",
-          width: 150,
+          width: 180,
         ),
 
         // Icon(

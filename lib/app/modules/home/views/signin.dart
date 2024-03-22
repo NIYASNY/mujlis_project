@@ -43,6 +43,9 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 const ImageLogo(),
+                SizedBox(
+                  height: 20,
+                ),
                 // const TodoLogo(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -76,45 +79,54 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Obx(() {
-                  return Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.all(8.0),
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: authcontroller.isAuthenticating
-                            ? PrimaryColor
-                            : PrimaryColor,
-                        borderRadius: BorderRadius.circular(5),
+                  return Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
                       ),
-                      child: authcontroller.isAuthenticating
-                          ? const Center(
-                              child: CircularProgressIndicator(),
-                            )
-                          : MaterialButton(
-                              onPressed: () async {
-                                FocusManager.instance.primaryFocus?.unfocus();
-                                if (formKey.currentState!.validate()) {
-                                  print('ok');
-                                  final result = await authcontroller.signIn(
-                                      emailcontroller.text.trim(),
-                                      passcontroller.text.trim());
-                                  if (!result) {
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(const SnackBar(
-                                      content: Text('Something went wrong'),
-                                      backgroundColor: Colors.red,
-                                    ));
-                                  }
-                                } else {
-                                  print('Not Ok');
-                                }
-                              },
-                              child: const Text(
-                                'Login',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
-                              ),
-                            ));
+                      Container(
+                          width: double.infinity,
+                          margin: const EdgeInsets.all(8.0),
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: authcontroller.isAuthenticating
+                                ? PrimaryColor
+                                : PrimaryColor,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: authcontroller.isAuthenticating
+                              ? const Center(
+                                  child: CircularProgressIndicator(),
+                                )
+                              : MaterialButton(
+                                  onPressed: () async {
+                                    FocusManager.instance.primaryFocus
+                                        ?.unfocus();
+                                    if (formKey.currentState!.validate()) {
+                                      print('ok');
+                                      final result =
+                                          await authcontroller.signIn(
+                                              emailcontroller.text.trim(),
+                                              passcontroller.text.trim());
+                                      if (!result) {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(const SnackBar(
+                                          content: Text('Something went wrong'),
+                                          backgroundColor: Colors.red,
+                                        ));
+                                      }
+                                    } else {
+                                      print('Not Ok');
+                                    }
+                                  },
+                                  child: const Text(
+                                    'Login',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                )),
+                    ],
+                  );
                 }),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -123,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Text('Create an account'),
                       TextButton(
                           onPressed: () {
-                            Get.off(() => const RegisterScreen());
+                            Get.off(() => RegisterScreen());
                           },
                           child: const Text(
                             'Register Now',
