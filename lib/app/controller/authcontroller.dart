@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/modules/home/views/signin.dart';
-import 'package:ui_for_college/app/authentication/widgets/adminpage.dart';
+import 'package:ui_for_college/app/controller/auth/signin.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/adminpage.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
-import 'package:ui_for_college/app/widgets/homepage.dart';
+import 'package:ui_for_college/app/view/widgets/homepage.dart';
 
 class AuthController extends GetxController {
   static AuthController get instance => Get.find();

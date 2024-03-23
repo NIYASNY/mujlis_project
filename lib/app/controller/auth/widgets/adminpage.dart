@@ -4,14 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/authentication/widgets/drawer.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/drawer.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
+import 'package:ui_for_college/app/view/Canteen/canteen_home.dart';
 import 'package:ui_for_college/app/view/bankwidgets/bottomnavigation.dart';
+import 'package:ui_for_college/app/view/hostel/hostel_page.dart';
 import 'package:ui_for_college/app/view/libraryscreen/library_home.dart';
 import 'package:ui_for_college/app/view/office/officehome.dart';
 import 'package:ui_for_college/app/view/staff/staffhome.dart';
 import 'package:ui_for_college/app/view/union/unionhome.dart';
-import 'package:ui_for_college/app/widgets/seeallpage.dart';
+import 'package:ui_for_college/app/view/widgets/seeallpage.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({
@@ -41,7 +43,7 @@ class _AdminPageState extends State<AdminPage> {
         items: [
           Icon(CupertinoIcons.home),
           Icon(CupertinoIcons.search),
-          Icon(CupertinoIcons.person),
+          Icon(CupertinoIcons.person)
         ],
       ),
       backgroundColor: Color.fromARGB(255, 5, 226, 78),
@@ -89,14 +91,26 @@ class _AdminPageState extends State<AdminPage> {
                                 ),
                               ],
                             ),
-                            CircleAvatar(
-                              child: IconButton(
-                                onPressed: () {
-                                  Get.off(() => EndDrawer());
-                                },
-                                icon: Icon(Icons.person),
+                            GestureDetector(
+                              onTap: () {
+                                Get.off(() => EndDraweradmin());
+                              },
+                              child: CircleAvatar(
+                                radius: 20, // Adjust the radius as needed
+                                backgroundImage: AssetImage(
+                                    'assets/admin.png'), // Replace 'assets/profile_image.png' with the path to your profile image
                               ),
                             ),
+
+                            // CircleAvatar(
+                            //   backgroundImage: AssetImage('assets/admin.png'),
+                            //   child: IconButton(
+                            //     onPressed: () {
+                            //       Get.off(() => EndDraweradmin());
+                            //     },
+                            //     icon: Icon(CupertinoIcons.person),
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),
@@ -156,7 +170,7 @@ class _AdminPageState extends State<AdminPage> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         _buildSquare(
-                                          Icons.business,
+                                          'assets/officeicon.png',
                                           'Office',
                                           () {
                                             Navigator.push(
@@ -167,7 +181,7 @@ class _AdminPageState extends State<AdminPage> {
                                           },
                                         ),
                                         _buildSquare(
-                                          Icons.people,
+                                          'assets/staff.png',
                                           'Staff',
                                           () {
                                             Navigator.push(
@@ -183,7 +197,9 @@ class _AdminPageState extends State<AdminPage> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(Icons.group, 'Union', () {
+                                        _buildSquare(
+                                            'assets/iconunion.png', 'Union',
+                                            () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
@@ -191,14 +207,23 @@ class _AdminPageState extends State<AdminPage> {
                                                       unionHomePage()));
                                         }),
                                         _buildSquare(
-                                            Icons.apartment, 'Hostel', () {}),
+                                            'assets/iconhostel.png', 'Hostel',
+                                            () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      HostelHomePage()));
+                                        }),
                                       ],
                                     ),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(Icons.book, 'Library', () {
+                                        _buildSquare(
+                                            'assets/library.png', 'Library',
+                                            () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
@@ -206,15 +231,22 @@ class _AdminPageState extends State<AdminPage> {
                                                       LibraryScreenHome()));
                                         }),
                                         _buildSquare(
-                                            Icons.fastfood, 'Canteen', () {}),
+                                            'assets/restaurant.png', 'Canteen',
+                                            () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      CanteenHome()));
+                                        }),
                                       ],
                                     ),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(
-                                            Icons.account_balance, 'Bank', () {
+                                        _buildSquare('assets/bank.png', 'Bank',
+                                            () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
@@ -222,7 +254,7 @@ class _AdminPageState extends State<AdminPage> {
                                                       BankBottom()));
                                         }),
                                         _buildSquare(
-                                            Icons.more_horiz, 'More', () {}),
+                                            'assets/menu.png', 'More', () {}),
                                       ],
                                     ),
                                   ],
@@ -243,14 +275,13 @@ class _AdminPageState extends State<AdminPage> {
 }
 
 Widget _buildSquare(
-  IconData icon,
+  String imagepath,
   String title,
   Function() ontap,
   // final onTap,
 ) {
   return GestureDetector(
     onTap: ontap,
-    // onTap: onTap,
     child: Card(
       color: Colors.white, // Changed card color
       child: Container(
@@ -259,10 +290,10 @@ Widget _buildSquare(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 40,
-              color: Colors.black,
+            Image.asset(
+              imagepath,
+              width: 60,
+              height: 60,
             ),
             SizedBox(height: 8),
             Text(

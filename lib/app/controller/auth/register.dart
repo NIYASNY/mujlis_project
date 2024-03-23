@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/modules/home/controller/authcontroller.dart';
-import 'package:ui_for_college/app/modules/home/views/signin.dart';
-import 'package:ui_for_college/app/authentication/widgets/imagelogo.dart';
+import 'package:ui_for_college/app/controller/authcontroller.dart';
+import 'package:ui_for_college/app/controller/auth/signin.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/imagelogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
 class RegisterScreen extends StatefulWidget {

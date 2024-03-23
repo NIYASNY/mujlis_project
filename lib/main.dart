@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_for_college/app/authentication/widgets/notification.dart';
-import 'package:ui_for_college/app/authentication/widgets/welcomescreen.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/notification.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/welcomescreen.dart';
 import 'package:ui_for_college/app/model/add.dart';
 import 'package:ui_for_college/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';

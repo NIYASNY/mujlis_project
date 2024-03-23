@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/authentication/widgets/detailspage.dart';
-import 'package:ui_for_college/app/authentication/widgets/drawer.dart';
+import 'package:ui_for_college/app/controller/auth/usedrawer.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/detailspage.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/drawer.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
-import 'package:ui_for_college/app/widgets/profileview.dart';
-import 'package:ui_for_college/app/widgets/seeallpage.dart';
+import 'package:ui_for_college/app/view/widgets/profileview.dart';
+import 'package:ui_for_college/app/view/widgets/seeallpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -87,12 +88,14 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             ),
-                            CircleAvatar(
-                              child: IconButton(
-                                onPressed: () {
-                                  Get.off(() => EndDrawer());
-                                },
-                                icon: Icon(Icons.person),
+                            GestureDetector(
+                              onTap: () {
+                                Get.off(() => EndDraweradmin());
+                              },
+                              child: CircleAvatar(
+                                radius: 20, // Adjust the radius as needed
+                                backgroundImage: AssetImage(
+                                    'assets/user.jpg'), // Replace 'assets/profile_image.png' with the path to your profile image
                               ),
                             ),
                             // CircleAvatar(
@@ -188,11 +191,11 @@ class _HomePageState extends State<HomePage> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         _buildSquare(
-                                          Icons.business,
+                                          'assets/officeicon.png',
                                           'Office',
                                         ),
                                         _buildSquare(
-                                          Icons.people,
+                                          'assets/staff.png',
                                           'Staff',
                                         ),
                                       ],
@@ -201,16 +204,10 @@ class _HomePageState extends State<HomePage> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        _buildSquare(Icons.group, 'Union'),
-                                        _buildSquare(Icons.apartment, 'Hostel'),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        _buildSquare(Icons.book, 'Library'),
-                                        _buildSquare(Icons.fastfood, 'Canteen'),
+                                        _buildSquare(
+                                            'assets/iconunion.png', 'Union'),
+                                        _buildSquare(
+                                            'assets/iconhostel.png', 'Hostel'),
                                       ],
                                     ),
                                     Row(
@@ -218,8 +215,17 @@ class _HomePageState extends State<HomePage> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         _buildSquare(
-                                            Icons.account_balance, 'Bank'),
-                                        _buildSquare(Icons.more_horiz, 'More'),
+                                            'assets/library.png', 'Library'),
+                                        _buildSquare(
+                                            'assets/restaurant.png', 'Canteen'),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        _buildSquare('assets/bank.png', 'Bank'),
+                                        _buildSquare('assets/menu.png', 'More'),
                                       ],
                                     ),
                                   ],
@@ -240,7 +246,7 @@ class _HomePageState extends State<HomePage> {
 }
 
 Widget _buildSquare(
-  IconData icon,
+  String imagepath,
   String title,
   // final onTap,
 ) {
@@ -254,10 +260,10 @@ Widget _buildSquare(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 40,
-              color: Colors.black,
+            Image.asset(
+              width: 50,
+              height: 50,
+              imagepath,
             ),
             SizedBox(height: 8),
             Text(

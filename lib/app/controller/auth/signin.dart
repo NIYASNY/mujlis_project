@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/modules/home/controller/authcontroller.dart';
-import 'package:ui_for_college/app/modules/home/views/register.dart';
-import 'package:ui_for_college/app/authentication/widgets/imagelogo.dart';
+import 'package:ui_for_college/app/controller/authcontroller.dart';
+import 'package:ui_for_college/app/controller/auth/register.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/imagelogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
 class LoginScreen extends StatefulWidget {
