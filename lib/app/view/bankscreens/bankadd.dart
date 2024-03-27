@@ -68,7 +68,7 @@ class _BankAdd_ScreenState extends State<BankAdd_Screen> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: const Color.fromARGB(255, 193, 53, 132),
+        color: Color.fromARGB(255, 46, 236, 8),
       ),
       height: 550,
       width: 340,

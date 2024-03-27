@@ -27,11 +27,7 @@ class _LibraryScreenSubHomeState extends State<LibraryScreenSubHome> {
       "author": "Michael Rosen",
       "img": "assets/1.jpg"
     },
-    {
-      "name": "Fatherhood",
-      "author": "Marcus Berkmann",
-      "img": "assets/2.jpg"
-    },
+    {"name": "Fatherhood", "author": "Marcus Berkmann", "img": "assets/2.jpg"},
     {
       "name": "The Time Travellers Handbook",
       "author": "Larry Downs",
@@ -93,11 +89,7 @@ class _LibraryScreenSubHomeState extends State<LibraryScreenSubHome> {
       "author": "by Jake Arnott",
       "img": "assets/10.jpg"
     },
-    {
-      "name": "Day Four",
-      "author": "by LOTZ, SARAH",
-      "img": "assets/11.jpg"
-    },
+    {"name": "Day Four", "author": "by LOTZ, SARAH", "img": "assets/11.jpg"},
     {
       "name": "Door to Door",
       "author": "by Edward Humes",
@@ -135,9 +127,9 @@ class _LibraryScreenSubHomeState extends State<LibraryScreenSubHome> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    SizedBox(
-                      height: media.width * 0.1,
-                    ),
+                    // SizedBox(
+                    //   height: media.width * 0.1,
+                    // ),
                     AppBar(
                       backgroundColor: Colors.transparent,
                       elevation: 0,
@@ -158,9 +150,9 @@ class _LibraryScreenSubHomeState extends State<LibraryScreenSubHome> {
                         itemCount: topPicksArr.length,
                         itemBuilder: (BuildContext context, int itemIndex,
                             int pageViewIndex) {
-                          var iObj = topPicksArr[itemIndex] as Map? ?? {};
+                          var toppic = topPicksArr[itemIndex] as Map? ?? {};
                           return LibraryTopPicksCell(
-                            iObj: iObj,
+                            iObj: toppic,
                           );
                         },
                         options: CarouselOptions(
@@ -227,7 +219,7 @@ class _LibraryScreenSubHomeState extends State<LibraryScreenSubHome> {
                       ]),
                     ),
                     SizedBox(
-                      height: media.width * 0.7,
+                      height: media.width * 0.9,
                       child: ListView.builder(
                           padding: const EdgeInsets.symmetric(
                               vertical: 15, horizontal: 8),

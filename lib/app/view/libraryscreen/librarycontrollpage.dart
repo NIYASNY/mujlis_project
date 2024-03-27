@@ -63,8 +63,7 @@ class LibraryLibrarianControlPage extends StatelessWidget {
                             color: Color(0xffFFECD6),
                             borderRadius: BorderRadius.circular(16),
                             image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/library_images/AddBook.jpg'),
+                              image: AssetImage('assets/AddBook.jpg'),
                               fit: BoxFit.fill,
                             )),
                       ),
@@ -78,8 +77,7 @@ class LibraryLibrarianControlPage extends StatelessWidget {
                             color: Color(0xff4CB9E7),
                             borderRadius: BorderRadius.circular(16),
                             image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/library_images/BookRegistration.png'),
+                              image: AssetImage('assets/BookRegistration.png'),
                               fit: BoxFit.fill,
                             )),
                       ),
@@ -144,8 +142,7 @@ class LibraryLibrarianControlPage extends StatelessWidget {
                             color: Color(0xff3559E0),
                             borderRadius: BorderRadius.circular(16),
                             image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/library_images/RegisterList.png'),
+                              image: AssetImage('assets/RegisterList.png'),
                               fit: BoxFit.fill,
                             )),
                       ),
@@ -159,8 +156,7 @@ class LibraryLibrarianControlPage extends StatelessWidget {
                             color: Color(0xffFFC5C5),
                             borderRadius: BorderRadius.circular(16),
                             image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/library_images/BookListView.png'),
+                              image: AssetImage('assets/BookListView.png'),
                               fit: BoxFit.fill,
                             )),
                       ),
@@ -225,8 +221,7 @@ class LibraryLibrarianControlPage extends StatelessWidget {
                           color: Color(0xff0F2167),
                           borderRadius: BorderRadius.circular(16),
                           image: DecorationImage(
-                            image: AssetImage(
-                                'assets/library_images/ComingSoon.png'),
+                            image: AssetImage('assets/ComingSoon.png'),
                             fit: BoxFit.fill,
                           )),
                     ),

@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/controller/authcontroller.dart';
 
-const PrimaryColor = Color.fromARGB(255, 5, 226, 78);
+const PrimaryColor = Colors.black;
 final firebaseAuth = FirebaseAuth.instance;
 final firestore = FirebaseFirestore.instance;
 final authcontroller = AuthController.instance;

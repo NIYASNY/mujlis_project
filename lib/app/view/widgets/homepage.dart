@@ -2,14 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:ui_for_college/app/controller/auth/usedrawer.dart';
-import 'package:ui_for_college/app/controller/auth/widgets/detailspage.dart';
 import 'package:ui_for_college/app/controller/auth/widgets/drawer.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
-import 'package:ui_for_college/app/view/widgets/profileview.dart';
 import 'package:ui_for_college/app/view/widgets/seeallpage.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,7 +31,8 @@ class _HomePageState extends State<HomePage> {
         },
         letIndexChange: (index) => true,
         backgroundColor: Colors.white,
-        color: Color.fromARGB(255, 5, 226, 78),
+        color: Color.fromARGB(230, 27, 4, 230),
+        // color: Color.fromARGB(255, 5, 226, 78),
         animationDuration: Duration(milliseconds: 300),
         items: [
           Icon(CupertinoIcons.home),
@@ -43,7 +40,8 @@ class _HomePageState extends State<HomePage> {
           Icon(CupertinoIcons.person),
         ],
       ),
-      backgroundColor: Color.fromARGB(255, 5, 226, 78),
+      backgroundColor:  Color.fromARGB(230, 27, 4, 230),
+      // backgroundColor: Color.fromARGB(255, 5, 226, 78),
       drawer: Drawer(
         backgroundColor: Colors.amber,
       ),
@@ -98,43 +96,9 @@ class _HomePageState extends State<HomePage> {
                                     'assets/user.jpg'), // Replace 'assets/profile_image.png' with the path to your profile image
                               ),
                             ),
-                            // CircleAvatar(
-
-                            //   // backgroundImage: NetworkImage(
-                            //   //     "https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg"),
-                            //   // radius: 24,
-                            // ),
                           ],
                         ),
                       ),
-                      // SizedBox(
-                      //   height: 25,
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                      //   child: Container(
-                      //     decoration: BoxDecoration(
-                      //       borderRadius: BorderRadius.circular(10),
-                      //       color: Colors.black,
-                      //     ),
-                      //     padding: EdgeInsets.all(12),
-                      //     child: Row(
-                      //       children: [
-                      //         Icon(
-                      //           Icons.search,
-                      //           color: Colors.white,
-                      //         ),
-                      //         SizedBox(
-                      //           width: 10,
-                      //         ),
-                      //         Text(
-                      //           'Search',
-                      //           style: TextStyle(color: Colors.white),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                       SizedBox(
                         height: 50,
                       ),

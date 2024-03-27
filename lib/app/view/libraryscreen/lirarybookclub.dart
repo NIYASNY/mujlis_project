@@ -6,6 +6,9 @@ class LibraryBookClub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 213, 235, 220),
+      ),
       backgroundColor: Color.fromARGB(255, 213, 235, 220),
       body: Stack(
         alignment: Alignment.center,
@@ -15,7 +18,7 @@ class LibraryBookClub extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.all(80.0),
-                child: Image.asset("assets/library_images/bookclub.png"),
+                child: Image.asset("assets/bookclub.png"),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),

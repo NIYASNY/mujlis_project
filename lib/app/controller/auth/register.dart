@@ -29,122 +29,125 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 5, 226, 78),
-        title: const Text('Register'),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Color.fromARGB(255, 5, 226, 78),
+      //   title: const Text('Register'),
+      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Form(
             key: formKey,
-            child: Column(
-              children: [
-                const ImageLogo(),
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    controller: emailController,
-                    validator: (value) {
-                      if (!regExForEmail.hasMatch(value!)) {
-                        return 'Please enter valid email';
-                      }
-                      return null;
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      label: Text('Email'),
-                    ),
+            child: SafeArea(
+              child: Column(
+                children: [
+                  const ImageLogo(),
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    controller: passwordController,
-                    obscureText: true,
-                    validator: (value) {
-                      if (value!.length < 8) {
-                        return 'Minimum 8 characters required';
-                      }
-                      return null;
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      label: Text('Password'),
-                    ),
-                  ),
-                ),
-                Obx(() {
-                  return Column(
-                    children: [
-                      SizedBox(
-                        height: 20,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: emailController,
+                      validator: (value) {
+                        if (!regExForEmail.hasMatch(value!)) {
+                          return 'Please enter valid email';
+                        }
+                        return null;
+                      },
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        label: Text('Email'),
                       ),
-                      Container(
-                        width: double.infinity,
-                        margin: const EdgeInsets.all(8.0),
-                        height: 60,
-                        decoration: BoxDecoration(
-                          color: authcontroller.isAuthenticating
-                              ? PrimaryColor
-                              : PrimaryColor,
-                          borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: passwordController,
+                      obscureText: true,
+                      validator: (value) {
+                        if (value!.length < 8) {
+                          return 'Minimum 8 characters required';
+                        }
+                        return null;
+                      },
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        label: Text('Password'),
+                      ),
+                    ),
+                  ),
+                  Obx(() {
+                    return Column(
+                      children: [
+                        SizedBox(
+                          height: 20,
                         ),
-                        child: authcontroller.isAuthenticating
-                            ? const Center(child: CircularProgressIndicator())
-                            : MaterialButton(
-                                onPressed: () async {
-                                  FocusManager.instance.primaryFocus?.unfocus();
-                                  if (formKey.currentState!.validate()) {
-                                    print('Ok');
-                                    final result =
-                                        await authcontroller.register(
-                                            emailController.text.trim(),
-                                            passwordController.text.trim());
-                                    if (!result) {
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(const SnackBar(
-                                        content: Text('Something went wrong'),
-                                        backgroundColor: Colors.red,
-                                      ));
+                        Container(
+                          width: double.infinity,
+                          margin: const EdgeInsets.all(8.0),
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: authcontroller.isAuthenticating
+                                ? PrimaryColor
+                                : PrimaryColor,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: authcontroller.isAuthenticating
+                              ? const Center(child: CircularProgressIndicator())
+                              : MaterialButton(
+                                  onPressed: () async {
+                                    FocusManager.instance.primaryFocus
+                                        ?.unfocus();
+                                    if (formKey.currentState!.validate()) {
+                                      print('Ok');
+                                      final result =
+                                          await authcontroller.register(
+                                              emailController.text.trim(),
+                                              passwordController.text.trim());
+                                      if (!result) {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(const SnackBar(
+                                          content: Text('Something went wrong'),
+                                          backgroundColor: Colors.red,
+                                        ));
+                                      }
+                                    } else {
+                                      print('Not ok');
                                     }
-                                  } else {
-                                    print('Not ok');
-                                  }
-                                },
-                                child: const Text(
-                                  'Register',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                  },
+                                  child: const Text(
+                                    'Register',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
                                 ),
-                              ),
-                      ),
-                    ],
-                  );
-                }),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Row(
-                    children: [
-                      const Text('Already have an account?'),
-                      TextButton(
-                        onPressed: () {
-                          Get.off(() => const LoginScreen());
-                        },
-                        child: const Text(
-                          'Login Now',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 5, 226, 78),
+                        ),
+                      ],
+                    );
+                  }),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      children: [
+                        const Text('Already have an account?'),
+                        TextButton(
+                          onPressed: () {
+                            Get.off(() => const LoginScreen());
+                          },
+                          child: const Text(
+                            'Login Now',
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 5, 226, 78),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/bankscreens/bankcards.dart';
 
 class BankFeatures extends StatefulWidget {
-  const BankFeatures({super.key, required String title});
+  const BankFeatures({Key? key, required this.title}) : super(key: key);
+
+  final String title;
 
   @override
   State<BankFeatures> createState() => _BankFeaturesState();
@@ -13,304 +15,242 @@ class _BankFeaturesState extends State<BankFeatures> {
   Widget build(BuildContext context) {
     final _controller = PageController();
 
-    return SafeArea(
-      child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              "assets/backgroundimage(1).jpg",
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                "assets/backgroundimage(1).jpg",
+              ),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.54),
+                BlendMode.darken,
+              ),
             ),
-            fit: BoxFit.cover,
-            opacity: 0.54,
           ),
-        ),
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                // AppBar with back button
-                Row(
+          child: Column(
+            children: [
+              // AppBar with back button
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(2.0),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
                       child: Container(
-                        width:
-                            25, // Set the width to control the size of the circular button
-                        height:
-                            47, // Set the height to control the size of the circular button
-                        child: AnimatedOpacity(
-                          duration: Duration(seconds: 3),
-                          opacity: 0.5,
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                              // Add any other actions you want to perform when the button is pressed
-                            },
-                            onHover: (isHovered) {
-                              // Handle hover state, e.g., change the color or shape
-                            },
-                            child: Ink(
-                              decoration: ShapeDecoration(
-                                  shape: CircleBorder(),
-                                  color: Color.fromARGB(255, 88, 81, 219)),
-                              child: Icon(
-                                Icons.arrow_back_ios_new,
-                                color: const Color.fromARGB(255, 0, 0, 0),
-                              ),
-                            ),
-                          ),
+                        width: 25,
+                        height: 47,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.blue,
+                        ),
+                        child: Icon(
+                          Icons.arrow_back,
+                          color: Colors.black,
                         ),
                       ),
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          'Services',
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 62, 5, 48),
-                          ),
-                        ),
-                      ],
+                    Text(
+                      'Services',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(0.9),
-                      width:
-                          25, // Set the width to control the size of the circular button
+                      width: 25,
                       height: 60,
-
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 88, 81, 219),
                         shape: BoxShape.circle,
+                        color: Colors.blue,
                       ),
                       child: Icon(
                         Icons.explore_sharp,
-                        color: const Color.fromARGB(255, 0, 0, 0),
+                        color: Colors.black,
                       ),
                     ),
                   ],
-                ), // ssb musf
+                ),
+              ),
 
-                SizedBox(height: 30),
+              SizedBox(height: 30),
 
-                Container(
-                  height: 160,
-                  child: PageView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller,
-                    children: [
-                      MyCard(
-                        balance: 3455.34,
-                        cardNumber: 87633245,
-                        expiryMonth: 01,
-                        expiryYear: 23,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border:
-                              Border.all(color: Colors.white.withOpacity(0.83)),
-                          gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [
-                                //begin color
-                                Colors.white.withOpacity(0.95),
-                                //end color
-                                Colors.white.withOpacity(0.15),
-                              ]),
-                        ),
-                        cardname: 'DEBIT',
-                      ),
-                      MyCard(
-                        balance: 57565.34,
-                        cardNumber: 324235464,
-                        expiryMonth: 02,
-                        expiryYear: 24,
-                        cardname: 'CREDIT',
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [
-                                Color(0xFFB4ADEDE),
-                                Color(0xFFF7BD5F5),
-                                Color(0xFFF1CA7EC),
-                                Color.fromARGB(255, 21, 113, 251),
-                                //add more colors for gradient
-                              ],
-                              begin: Alignment
-                                  .topLeft, //begin of the gradient color
-                              end: Alignment
-                                  .bottomRight, //end of the gradient color
-                              stops: [
-                                0,
-                                0.2,
-                                0.5,
-                                0.8
-                              ] //stops for individual color
-                              //set the stops number equal to numbers of color
+              Expanded(
+                child: ListView(
+                  children: [
+                    Container(
+                      height: 160,
+                      child: PageView(
+                        scrollDirection: Axis.horizontal,
+                        controller: _controller,
+                        children: [
+                          MyCard(
+                            balance: 3455.34,
+                            cardNumber: 87633245,
+                            expiryMonth: 01,
+                            expiryYear: 23,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              border: Border.all(
+                                color: Colors.white.withOpacity(0.83),
                               ),
-
-                          borderRadius:
-                              BorderRadius.circular(30), //border corner radius
-                        ),
-                      ),
-                      MyCard(
-                        balance: 645645,
-                        cardNumber: 87923421343,
-                        expiryMonth: 03,
-                        expiryYear: 25,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [
-                                const Color.fromARGB(255, 252, 170, 48),
-                                const Color.fromARGB(255, 248, 178, 87),
-                                Color.fromARGB(255, 205, 76, 67),
-                                Color.fromARGB(255, 231, 111, 111)
-                                //add more colors for gradient
-                              ],
-                              begin: Alignment
-                                  .topLeft, //begin of the gradient color
-                              end: Alignment
-                                  .bottomRight, //end of the gradient color
-                              stops: [
-                                0,
-                                0.2,
-                                0.5,
-                                0.8
-                              ] //stops for individual color
-                              //set the stops number equal to numbers of color
+                              gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Colors.white.withOpacity(0.95),
+                                  Colors.white.withOpacity(0.15),
+                                ],
                               ),
-
-                          borderRadius:
-                              BorderRadius.circular(30), //border corner radius
-                        ),
-                        cardname: 'LOAN',
-                      ),
-                    ],
-                  ),
-                ),
-
-                // mycard
-                SingleChildScrollView(),
-
-                SizedBox(height: 20),
-                Text(
-                  "Schemes",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 16, 16, 17)),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: <Widget>[
-                      InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: ListTile(
-                            leading: Image(
-                              image:
-                                  AssetImage("assets/Education.png"),
                             ),
-                            title: Text(
-                              'KURI',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 15, 6, 185),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            subtitle: Text(
-                                'Emerging Hand`s power With bolding inked mind filling ideas in paper'),
+                            cardname: 'DEBIT',
                           ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: ListTile(
-                            leading: Image(
-                              image: AssetImage(
-                                  "assets/Transportation.png"),
-                            ),
-                            title: Text(
-                              'FD (Fixed Deposit)',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 13, 4, 185)),
-                            ),
-                            subtitle: Text(
-                                'Unleashing The Most fentabulus Brains without fearing as Stone'),
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: ListTile(
-                            leading: Image(
-                              image:
-                                  AssetImage("assets/Deposit.png"),
-                            ),
-                            title: Text(
-                              'Coming Soon',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 13, 4, 185)),
+                          MyCard(
+                            balance: 57565.34,
+                            cardNumber: 324235464,
+                            expiryMonth: 02,
+                            expiryYear: 24,
+                            cardname: 'CREDIT',
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color(0xFFB4ADEDE),
+                                  Color(0xFFF7BD5F5),
+                                  Color(0xFFF1CA7EC),
+                                  Color(0xFF155FEA),
+                                ],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                stops: [0, 0.2, 0.5, 0.8],
+                              ),
+                              borderRadius: BorderRadius.circular(30),
                             ),
                           ),
+                          MyCard(
+                            balance: 645645,
+                            cardNumber: 87923421343,
+                            expiryMonth: 03,
+                            expiryYear: 25,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 252, 170, 48),
+                                  Color.fromARGB(255, 248, 178, 87),
+                                  Color.fromARGB(255, 205, 76, 67),
+                                  Color.fromARGB(255, 231, 111, 111),
+                                ],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                stops: [0, 0.2, 0.5, 0.8],
+                              ),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            cardname: 'LOAN',
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 10),
+                      child: Text(
+                        "Schemes",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+
+                    // Schemes cards
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          // Replace InkWell with GestureDetector if needed
+                          InkWell(
+                            onTap: () {},
+                            child: Card(
+                              child: ListTile(
+                                leading: Image.asset(
+                                  "assets/Education.png",
+                                ),
+                                title: Text(
+                                  'KURI',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'Emerging Hand`s power With bolding inked mind filling ideas in paper',
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          InkWell(
+                            onTap: () {},
+                            child: Card(
+                              child: ListTile(
+                                leading: Image.asset(
+                                  "assets/Transportation.png",
+                                ),
+                                title: Text(
+                                  'FD (Fixed Deposit)',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'Unleashing The Most fentabulus Brains without fearing as Stone',
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          InkWell(
+                            onTap: () {},
+                            child: Card(
+                              child: ListTile(
+                                leading: Image.asset(
+                                  "assets/Deposit.png",
+                                ),
+                                title: Text(
+                                  'Coming Soon',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-
-                // indicatorr
-
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // InkWell(
-                      //   onTap: () {
-                      //     Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //           builder: (context) => Withdraw()),
-                      //     );
-                      //   },
-                      //   child: MyButton(
-                      //     iconImagePath: 'lib/icons/send-money.png',
-                      //     buttonText: 'Withdraw',
-                      //   ),
-                      // ),
-                      // InkWell(
-                      //   onTap: () {
-                      //     Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //           builder: (context) => Withdraw()),
-                      //     );
-                      //   },
-                      //   child: MyButton(
-                      //     iconImagePath: 'lib/icons/bill.png',
-                      //     buttonText: 'Deposit',
-                      //   ),
-                      // ),
-                    ],
-                  ),
-                ),
-                // withdraw//deposit//history
-
-                SizedBox(height: 10),
-                // tile list
-                // tile list
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

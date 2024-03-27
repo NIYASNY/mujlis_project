@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/model/bankdata/utility.dart';
 

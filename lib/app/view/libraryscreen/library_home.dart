@@ -15,25 +15,27 @@ class _LibraryScreenHomeState extends State<LibraryScreenHome> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text('MAJLIS LIBRARY'),
-          backgroundColor: Colors.blue[300],
-          centerTitle: true,
-        ),
+        // appBar: AppBar(
+        //   title: Text(
+        //     'LIBRARY',
+        //   ),
+        //   backgroundColor: Color.fromARGB(230, 9, 204, 135),
+        //   centerTitle: true,
+        // ),
         body: Column(
           children: [
-            TabBar(tabs: [
-              Tab(
-                icon: Icon(
-                  Icons.home,
-                ),
-              ),
-              Tab(
-                icon: Icon(
-                  Icons.person,
-                ),
-              )
-            ]),
+            // TabBar(tabs: [
+            //   Tab(
+            //     icon: Icon(
+            //       Icons.home,
+            //     ),
+            //   ),
+            //   Tab(
+            //     icon: Icon(
+            //       Icons.person,
+            //     ),
+            //   )
+            // ]),
             Expanded(
               child: TabBarView(children: [
                 LibraryScreenSubHome(),

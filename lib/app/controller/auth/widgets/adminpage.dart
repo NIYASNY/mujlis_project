@@ -38,7 +38,7 @@ class _AdminPageState extends State<AdminPage> {
         },
         letIndexChange: (index) => true,
         backgroundColor: Colors.white,
-        color: Color.fromARGB(255, 5, 226, 78),
+        color: Color.fromARGB(230, 27, 4, 230),
         animationDuration: Duration(milliseconds: 300),
         items: [
           Icon(CupertinoIcons.home),
@@ -46,7 +46,7 @@ class _AdminPageState extends State<AdminPage> {
           Icon(CupertinoIcons.person)
         ],
       ),
-      backgroundColor: Color.fromARGB(255, 5, 226, 78),
+      backgroundColor: Color.fromARGB(230, 27, 4, 230),
       drawer: Drawer(
         backgroundColor: Colors.amber,
       ),
@@ -93,7 +93,11 @@ class _AdminPageState extends State<AdminPage> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Get.off(() => EndDraweradmin());
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            EndDraweradmin()));
                               },
                               child: CircleAvatar(
                                 radius: 20, // Adjust the radius as needed
@@ -101,16 +105,6 @@ class _AdminPageState extends State<AdminPage> {
                                     'assets/admin.png'), // Replace 'assets/profile_image.png' with the path to your profile image
                               ),
                             ),
-
-                            // CircleAvatar(
-                            //   backgroundImage: AssetImage('assets/admin.png'),
-                            //   child: IconButton(
-                            //     onPressed: () {
-                            //       Get.off(() => EndDraweradmin());
-                            //     },
-                            //     icon: Icon(CupertinoIcons.person),
-                            //   ),
-                            // ),
                           ],
                         ),
                       ),
