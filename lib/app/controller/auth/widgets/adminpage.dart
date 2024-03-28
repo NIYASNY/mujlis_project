@@ -38,7 +38,8 @@ class _AdminPageState extends State<AdminPage> {
         },
         letIndexChange: (index) => true,
         backgroundColor: Colors.white,
-        color: Color.fromARGB(230, 27, 4, 230),
+        color: Colors.blueAccent,
+        // color: Color.fromARGB(230, 27, 4, 230),
         animationDuration: Duration(milliseconds: 300),
         items: [
           Icon(CupertinoIcons.home),
@@ -46,7 +47,9 @@ class _AdminPageState extends State<AdminPage> {
           Icon(CupertinoIcons.person)
         ],
       ),
-      backgroundColor: Color.fromARGB(230, 27, 4, 230),
+      backgroundColor: Colors.blueAccent.withOpacity(0.9),
+      // backgroundColor: Colors.deepPurple,
+      // backgroundColor: Color.fromARGB(230, 27, 4, 230),
       drawer: Drawer(
         backgroundColor: Colors.amber,
       ),
@@ -87,7 +90,7 @@ class _AdminPageState extends State<AdminPage> {
                                 ),
                                 Text(
                                   "16 March 2024",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ),
@@ -155,7 +158,7 @@ class _AdminPageState extends State<AdminPage> {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 20,
+                                  height: 10,
                                 ),
                                 Column(
                                   children: [
@@ -174,6 +177,7 @@ class _AdminPageState extends State<AdminPage> {
                                                         OfficeHomePage()));
                                           },
                                         ),
+                                        //  SizedBox(height: 10,),
                                         _buildSquare(
                                           'assets/staff.png',
                                           'Staff',
@@ -186,6 +190,9 @@ class _AdminPageState extends State<AdminPage> {
                                           },
                                         ),
                                       ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
                                     ),
                                     Row(
                                       mainAxisAlignment:
@@ -211,6 +218,9 @@ class _AdminPageState extends State<AdminPage> {
                                         }),
                                       ],
                                     ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceEvenly,
@@ -234,6 +244,9 @@ class _AdminPageState extends State<AdminPage> {
                                                       CanteenHome()));
                                         }),
                                       ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
                                     ),
                                     Row(
                                       mainAxisAlignment:

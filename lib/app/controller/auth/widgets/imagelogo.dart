@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class ImageLogo extends StatelessWidget {
-  const ImageLogo({Key? key}) : super(key: key);
+class LoginLogo extends StatelessWidget {
+  const LoginLogo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

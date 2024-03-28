@@ -41,12 +41,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
             child: SafeArea(
               child: Column(
                 children: [
-                  const ImageLogo(),
+                  // const ImageLogo(),
                   SizedBox(
                     height: 20,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding:  EdgeInsets.all(8.0),
                     child: TextFormField(
                       controller: emailController,
                       validator: (value) {
@@ -55,8 +55,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         }
                         return null;
                       },
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
+                      decoration:  InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)
+                        ),
+                        // border: OutlineInputBorder(),
                         label: Text('Email'),
                       ),
                     ),

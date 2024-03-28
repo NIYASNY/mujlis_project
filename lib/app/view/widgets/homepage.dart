@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         },
         letIndexChange: (index) => true,
         backgroundColor: Colors.white,
-        color: Color.fromARGB(230, 27, 4, 230),
+        color: Colors.blueAccent,
         // color: Color.fromARGB(255, 5, 226, 78),
         animationDuration: Duration(milliseconds: 300),
         items: [
@@ -40,7 +40,8 @@ class _HomePageState extends State<HomePage> {
           Icon(CupertinoIcons.person),
         ],
       ),
-      backgroundColor:  Color.fromARGB(230, 27, 4, 230),
+      // backgroundColor:  Color.fromARGB(230, 27, 4, 230),
+      backgroundColor: Colors.blueAccent.withOpacity(0.9),
       // backgroundColor: Color.fromARGB(255, 5, 226, 78),
       drawer: Drawer(
         backgroundColor: Colors.amber,
