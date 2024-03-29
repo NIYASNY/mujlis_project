@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/office/officestockpage.dart';
 import 'package:ui_for_college/app/view/office/officestudentfee.dart';
-import 'package:ui_for_college/app/view/office/studentadding.dart';
 import 'package:ui_for_college/app/view/staff/home/homescreen.dart';
 import 'package:ui_for_college/app/view/staff/nonstaffpage.dart';
 
@@ -29,8 +28,9 @@ class OfficeHomePage extends StatelessWidget {
                 OfficeNonStaffPage(), Colors.green),
             _buildAnimatedCard(context, 'New Admission',
                 Icons.add_circle_outline, HomeScreen(), Colors.orange),
-            _buildAnimatedCard(context, 'Fee Details', Icons.attach_money,
-                OfficeStudentFee(), Colors.purple),
+            // _buildAnimatedCard(context, 'Fee Details', Icons.attach_money
+            //     // OfficeStudentFee(), Colors.purple
+            //     ),
             _buildAnimatedCard(
                 context, 'Stock', Icons.store, OfficeStockPage(), Colors.teal),
           ],

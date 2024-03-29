@@ -138,23 +138,23 @@ class _AdminPageState extends State<AdminPage> {
                                             fontSize: 20),
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          right: 25, top: 20),
-                                      child: TextButton(
-                                        child: Text(
-                                          "See all",
-                                          style: TextStyle(fontSize: 18),
-                                        ),
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Seeall()));
-                                        },
-                                      ),
-                                    ),
+                                    // Padding(
+                                    //   padding: const EdgeInsets.only(
+                                    //       right: 25, top: 20),
+                                    //   child: TextButton(
+                                    //     child: Text(
+                                    //       "See all",
+                                    //       style: TextStyle(fontSize: 18),
+                                    //     ),
+                                    //     onPressed: () {
+                                    //       Navigator.push(
+                                    //           context,
+                                    //           MaterialPageRoute(
+                                    //               builder: (context) =>
+                                    //                   Seeall()));
+                                    //     },
+                                    //   ),
+                                    // ),
                                   ],
                                 ),
                                 SizedBox(
