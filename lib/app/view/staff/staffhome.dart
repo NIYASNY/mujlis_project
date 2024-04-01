@@ -11,26 +11,50 @@ class StaffHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Majlis Office'),
       ),
-      body: GridView.count(crossAxisCount: 2, children: [
-        _buildCard(context, 'Staff', StaffTeachersPage()),
-        _buildCard(context, 'Non-Staff', OfficeNonStaffPage()),
-        _buildCard(context, 'StaffSecurity', StaffSecurityPage()),
-        _buildCard(context, 'StaffCook', StaffCookPage()),
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 16.0,
+          mainAxisSpacing: 16.0,
+          children: [
+            _buildCard(context, 'Staff', StaffTeachersPage(), Colors.blue),
+            _buildCard(
+                context, 'Non-Staff', OfficeNonStaffPage(), Colors.green),
+            _buildCard(
+                context, 'Staff Security', StaffSecurityPage(), Colors.orange),
+            _buildCard(context, 'Staff Cook', StaffCookPage(), Colors.red),
+          ],
+        ),
+      ),
     );
   }
 
-  Widget _buildCard(BuildContext context, String title, Widget page) {
+  Widget _buildCard(
+      BuildContext context, String title, Widget page, Color color) {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => page));
       },
       child: Card(
-        margin: EdgeInsets.all(16.0),
-        child: Center(
-          child: Text(
-            title,
-            style: TextStyle(fontSize: 20.0),
+        elevation: 4.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: color,
+          ),
+          child: Center(
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
       ),
