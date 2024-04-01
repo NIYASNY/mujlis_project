@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:ui_for_college/app/controller/auth/widgets/squaretile.dart';
 import 'package:ui_for_college/app/controller/authcontroller.dart';
 import 'package:ui_for_college/app/controller/auth/register.dart';
-import 'package:ui_for_college/app/controller/auth/widgets/imagelogo.dart';
+import 'package:ui_for_college/app/controller/auth/widgets/loginlogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
 class LoginScreen extends StatefulWidget {
