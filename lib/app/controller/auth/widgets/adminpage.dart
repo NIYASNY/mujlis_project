@@ -3,7 +3,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 import 'package:ui_for_college/app/controller/auth/widgets/drawer.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 import 'package:ui_for_college/app/view/Canteen/canteen_home.dart';
@@ -13,7 +12,6 @@ import 'package:ui_for_college/app/view/libraryscreen/library_home.dart';
 import 'package:ui_for_college/app/view/office/officehome.dart';
 import 'package:ui_for_college/app/view/staff/staffhome.dart';
 import 'package:ui_for_college/app/view/union/unionhome.dart';
-import 'package:ui_for_college/app/view/widgets/seeallpage.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({
@@ -138,23 +136,6 @@ class _AdminPageState extends State<AdminPage> {
                                             fontSize: 20),
                                       ),
                                     ),
-                                    // Padding(
-                                    //   padding: const EdgeInsets.only(
-                                    //       right: 25, top: 20),
-                                    //   child: TextButton(
-                                    //     child: Text(
-                                    //       "See all",
-                                    //       style: TextStyle(fontSize: 18),
-                                    //     ),
-                                    //     onPressed: () {
-                                    //       Navigator.push(
-                                    //           context,
-                                    //           MaterialPageRoute(
-                                    //               builder: (context) =>
-                                    //                   Seeall()));
-                                    //     },
-                                    //   ),
-                                    // ),
                                   ],
                                 ),
                                 SizedBox(

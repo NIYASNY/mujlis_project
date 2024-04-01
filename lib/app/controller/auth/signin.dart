@@ -32,10 +32,6 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      // appBar: AppBar(
-      //   backgroundColor: Color.fromARGB(255, 5, 226, 78),
-      //   title: const Text('Login'),
-      // ),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: Padding(
@@ -47,14 +43,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const LoginLogo(),
                   SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   Text(
-                    "Welcome back you've have been missed!",
-                    style: TextStyle(color: Colors.grey[700], fontSize: 16),
+                    "Welcome Back!  Let's Get Started",
+                    style: TextStyle(color: Colors.grey[700], fontSize: 17),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   // const TodoLogo(),
                   Padding(

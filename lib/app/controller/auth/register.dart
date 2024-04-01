@@ -4,7 +4,6 @@ import 'package:ui_for_college/app/controller/auth/widgets/registerlogo.dart';
 import 'package:ui_for_college/app/controller/auth/widgets/squaretile.dart';
 import 'package:ui_for_college/app/controller/authcontroller.dart';
 import 'package:ui_for_college/app/controller/auth/signin.dart';
-import 'package:ui_for_college/app/controller/auth/widgets/loginlogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -32,10 +31,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      // appBar: AppBar(
-      //   backgroundColor: Color.fromARGB(255, 5, 226, 78),
-      //   title: const Text('Register'),
-      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -48,6 +43,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   // const ImageLogo(),
                   SizedBox(
                     height: 50,
+                  ),
+                  Text(
+                    "Ready to Begin? Create Your Account",
+                    style: TextStyle(color: Colors.grey[700], fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 30,
                   ),
                   Padding(
                     padding: EdgeInsets.all(8.0),
