@@ -46,14 +46,9 @@ class _AdminPageState extends State<AdminPage> {
         ],
       ),
       backgroundColor: Colors.blueAccent.withOpacity(0.9),
-      // backgroundColor: Colors.deepPurple,
-      // backgroundColor: Color.fromARGB(230, 27, 4, 230),
       drawer: Drawer(
         backgroundColor: Colors.amber,
       ),
-
-      // drawer: EndDrawer(),
-      // endDrawer: EndDrawer(),
       body: Container(
         child: SafeArea(
           child: Container(
