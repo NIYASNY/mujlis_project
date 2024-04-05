@@ -16,6 +16,7 @@ import 'package:ui_for_college/app/view/libraryscreen/library_home.dart';
 import 'package:ui_for_college/app/view/office/officehome.dart';
 import 'package:ui_for_college/app/view/staff/staffhome.dart';
 import 'package:ui_for_college/app/view/union/unionhome.dart';
+import 'package:ui_for_college/app/view/widgets/getmonth.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({
@@ -103,9 +104,14 @@ class _AdminPageState extends State<AdminPage> {
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
-                                        "16 March 2024",
+                                        "${DateTime.now().day} ${getMonth(DateTime.now().month)} ${DateTime.now().year}",
                                         style: TextStyle(color: Colors.white),
-                                      ),
+                                      )
+
+                                      // Text(
+                                      //   "16 March 2024",
+                                      //   style: TextStyle(color: Colors.white),
+                                      // ),
                                     ],
                                   ),
                                   GestureDetector(

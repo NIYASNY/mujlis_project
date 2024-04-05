@@ -1,4 +1,7 @@
-part of 'userhome_bloc.dart';
+abstract class UserHomeEvent {}
 
-@immutable
-sealed class UserhomeEvent {}
+class UpdateUserIndexEvent extends UserHomeEvent {
+  final int newIndex;
+
+  UpdateUserIndexEvent(this.newIndex);
+}

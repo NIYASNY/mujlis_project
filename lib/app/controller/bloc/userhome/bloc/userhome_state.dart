@@ -1,6 +1,7 @@
-part of 'userhome_bloc.dart';
+abstract class userHomeState {}
 
-@immutable
-sealed class UserhomeState {}
+class Indexstate extends userHomeState {
+  final int index;
 
-final class UserhomeInitial extends UserhomeState {}
+  Indexstate(this.index);
+}
