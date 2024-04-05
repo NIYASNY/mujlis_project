@@ -6,7 +6,6 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ui_for_college/app/controller/auth/widgets/drawer.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
-import 'package:ui_for_college/app/view/widgets/seeallpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({

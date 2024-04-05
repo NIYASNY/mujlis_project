@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:ui_for_college/app/controller/auth/signin.dart';
-import 'package:ui_for_college/app/controller/auth/widgets/adminpage.dart';
+import 'package:ui_for_college/app/view/widgets/adminpage.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 import 'package:ui_for_college/app/view/widgets/homepage.dart';
 
