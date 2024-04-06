@@ -52,15 +52,10 @@ class _HomePageState extends State<HomePage> {
                 Icon(CupertinoIcons.person),
               ],
             ),
-            // backgroundColor:  Color.fromARGB(230, 27, 4, 230),
-            backgroundColor: Colors.blueAccent.withOpacity(0.9),
-            // backgroundColor: Color.fromARGB(255, 5, 226, 78),
+            backgroundColor: Colors.blueAccent,
             drawer: Drawer(
               backgroundColor: Colors.amber,
             ),
-
-            // drawer: EndDrawer(),
-            // endDrawer: EndDrawer(),
             body: Container(
               child: SafeArea(
                 child: Container(

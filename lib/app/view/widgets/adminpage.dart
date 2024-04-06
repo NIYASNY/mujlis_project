@@ -37,6 +37,12 @@ class _AdminPageState extends State<AdminPage> {
   final adminPageBloc = AdminPageBloc();
   // int index = 0;
 
+  List<Widget> featureScreens = [
+    AdminPage(),
+    OfficeHomePage(),
+    StaffHomePage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -47,13 +53,11 @@ class _AdminPageState extends State<AdminPage> {
             bottomNavigationBar: CurvedNavigationBar(
               onTap: (value) {
                 adminPageBloc.add(UpdateIndexEvent(value));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => featureScreens[value]));
               },
-
-              // onTap: (value) {
-              //   setState(() {
-              //     index = value;
-              //   });
-              // },
               letIndexChange: (index) => true,
               backgroundColor: Colors.white,
               color: Colors.blueAccent,
