@@ -155,10 +155,12 @@ class _HomePageState extends State<HomePage> {
                                               _buildSquare(
                                                 'assets/officeicon.png',
                                                 'Office',
+                                                () {},
                                               ),
                                               _buildSquare(
                                                 'assets/staff.png',
                                                 'Staff',
+                                                () {},
                                               ),
                                             ],
                                           ),
@@ -168,10 +170,14 @@ class _HomePageState extends State<HomePage> {
                                             children: [
                                               _buildSquare(
                                                   'assets/iconunion.png',
-                                                  'Union'),
+                                                  'Union',
+                                                  () {},
+                                                  ),
                                               _buildSquare(
                                                   'assets/iconhostel.png',
-                                                  'Hostel'),
+                                                  'Hostel',
+                                                  () {},
+                                                  ),
                                             ],
                                           ),
                                           Row(
@@ -179,10 +185,14 @@ class _HomePageState extends State<HomePage> {
                                                 MainAxisAlignment.spaceEvenly,
                                             children: [
                                               _buildSquare('assets/library.png',
-                                                  'Library'),
+                                                  'Library',
+                                                  () {},
+                                                  ),
                                               _buildSquare(
                                                   'assets/restaurant.png',
-                                                  'Canteen'),
+                                                  'Canteen',
+                                                  () {},
+                                                  ),
                                             ],
                                           ),
                                           Row(
@@ -190,9 +200,10 @@ class _HomePageState extends State<HomePage> {
                                                 MainAxisAlignment.spaceEvenly,
                                             children: [
                                               _buildSquare(
-                                                  'assets/bank.png', 'Bank'),
+                                                  'assets/bank.png', 'Bank',
+                                                  () {},),
                                               _buildSquare(
-                                                  'assets/menu.png', 'More'),
+                                                  'assets/menu.png', 'More',() {},),
                                             ],
                                           ),
                                         ],
@@ -218,6 +229,7 @@ class _HomePageState extends State<HomePage> {
 Widget _buildSquare(
   String imagepath,
   String title,
+  Function() onTap,
   // final onTap,
 ) {
   return GestureDetector(
