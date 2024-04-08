@@ -110,12 +110,7 @@ class _AdminPageState extends State<AdminPage> {
                                       Text(
                                         "${DateTime.now().day} ${getMonth(DateTime.now().month)} ${DateTime.now().year}",
                                         style: TextStyle(color: Colors.white),
-                                      )
-
-                                      // Text(
-                                      //   "16 March 2024",
-                                      //   style: TextStyle(color: Colors.white),
-                                      // ),
+                                      ),
                                     ],
                                   ),
                                   GestureDetector(

@@ -36,11 +36,6 @@ class _HomePageState extends State<HomePage> {
               onTap: (value) {
                 userhomebloc.add(UpdateUserIndexEvent(value));
               },
-              // onTap: (value) {
-              //   setState(() {
-              //     index = value;
-              //   });
-              // },
               letIndexChange: (index) => true,
               backgroundColor: Colors.white,
               color: Colors.blueAccent,
@@ -90,11 +85,6 @@ class _HomePageState extends State<HomePage> {
                                             fontSize: 24,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      // Text(
-                                      //   "16 March 2024",
-                                      //   style: TextStyle(color: Colors.black),
-                                      // ),
-
                                       Text(
                                         "${DateTime.now().day} ${getMonth(DateTime.now().month)} ${DateTime.now().year}",
                                         style: TextStyle(color: Colors.white),

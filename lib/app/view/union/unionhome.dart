@@ -17,7 +17,6 @@ class unionHomePage extends StatefulWidget {
 class _UnionExecutiveCommitteeState extends State<unionHomePage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _bioController = TextEditingController();
-  late String _imageUrl = '';
 
   File? _imageFile;
 
@@ -166,7 +165,6 @@ class _UnionExecutiveCommitteeState extends State<unionHomePage> {
                               String imageUrl =
                                   await _uploadImage(_imageFile!);
                               setState(() {
-                                _imageUrl = imageUrl;
                               });
                               await _addToFirestore(imageUrl);
                               // Clear the text fields and image selection after adding to Firestore
