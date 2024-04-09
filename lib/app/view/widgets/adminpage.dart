@@ -37,11 +37,28 @@ class _AdminPageState extends State<AdminPage> {
   final adminPageBloc = AdminPageBloc();
   // int index = 0;
 
-  List<Widget> featureScreens = [
-    AdminPage(),
-    OfficeHomePage(),
-    StaffHomePage(),
+  // List<Widget> featureScreens = [
+  //   AdminPage(),
+  //   OfficeHomePage(),
+  //   StaffHomePage(),
+  // ];
+
+  final items = const [
+    Icon(
+      CupertinoIcons.home,
+      size: 30,
+    ),
+    Icon(
+      CupertinoIcons.home,
+      size: 30,
+    ),
+    Icon(
+      CupertinoIcons.home,
+      size: 30,
+    ),
   ];
+
+  int index = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -53,21 +70,23 @@ class _AdminPageState extends State<AdminPage> {
             bottomNavigationBar: CurvedNavigationBar(
               onTap: (value) {
                 adminPageBloc.add(UpdateIndexEvent(value));
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => featureScreens[value]));
+                setState(() {
+                  index = value;
+                });
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => featureScreens[value]));
               },
               letIndexChange: (index) => true,
-              backgroundColor: Colors.white,
-              color: Colors.blueAccent,
-              // color: Color.fromARGB(230, 27, 4, 230),
+              backgroundColor: Colors.transparent,
+              height: 70,
+              // backgroundColor: Colors.white,
+              // color: Colors.blueAccent,
+              color: Color.fromARGB(230, 27, 4, 230),
               animationDuration: Duration(milliseconds: 300),
-              items: [
-                Icon(CupertinoIcons.home),
-                Icon(CupertinoIcons.search),
-                Icon(CupertinoIcons.person)
-              ],
+              items: items,
+              index: index,
             ),
             backgroundColor: Colors.blueAccent.withOpacity(0.9),
             drawer: Drawer(
@@ -284,6 +303,22 @@ class _AdminPageState extends State<AdminPage> {
       ),
     );
   }
+}
+
+Widget getselectedwidget({required int index}) {
+  Widget widget;
+  switch (index) {
+    case 0:
+      widget = const AdminPage();
+      break;
+    case 1:
+      widget = OfficeHomePage();
+      break;
+    default:
+      widget = const LibraryScreenHome();
+      break;
+  }
+  return widget;
 }
 
 Widget _buildSquare(
