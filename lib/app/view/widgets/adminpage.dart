@@ -37,11 +37,6 @@ class _AdminPageState extends State<AdminPage> {
   final adminPageBloc = AdminPageBloc();
   // int index = 0;
 
-  // List<Widget> featureScreens = [
-  //   AdminPage(),
-  //   OfficeHomePage(),
-  //   StaffHomePage(),
-  // ];
 
   final items = const [
     Icon(
@@ -73,10 +68,6 @@ class _AdminPageState extends State<AdminPage> {
                 setState(() {
                   index = value;
                 });
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => featureScreens[value]));
               },
               letIndexChange: (index) => true,
               backgroundColor: Colors.transparent,
