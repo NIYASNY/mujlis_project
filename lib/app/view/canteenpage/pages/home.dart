@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ui_for_college/app/view/canteenpage/pages/bottomnav.dart';
 import 'package:ui_for_college/app/view/canteenpage/widgets/widget_support.dart';
 
 class CanteenHome extends StatefulWidget {
@@ -15,6 +16,7 @@ class _CanteenHomeState extends State<CanteenHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: bottomnav(),
       body: Container(
         margin: EdgeInsets.only(top: 50.0, left: 20.0, right: 10.0),
         child: Column(
@@ -72,8 +74,8 @@ class _CanteenHomeState extends State<CanteenHome> {
                           children: [
                             Image.asset(
                               "assets/canteen/salad1.jpg",
-                              height: 200,
-                              width: 200,
+                              height: 160,
+                              width: 160,
                               fit: BoxFit.cover,
                             ),
                             Text(
@@ -114,26 +116,26 @@ class _CanteenHomeState extends State<CanteenHome> {
                           children: [
                             Image.asset(
                               "assets/canteen/salad1.jpg",
-                              height: 200,
-                              width: 200,
+                              height: 160,
+                              width: 160,
                               fit: BoxFit.cover,
                             ),
                             Text(
-                              'Veggie Patch Platter',
+                              'Mixed veg salad',
                               style: Appwidget.boldTextfeildStyle(),
                             ),
                             SizedBox(
                               height: 5.0,
                             ),
                             Text(
-                              'Fresh and Flavorful',
+                              'spicy with tomato',
                               style: Appwidget.LightTextfeildStyle(),
                             ),
                             SizedBox(
                               height: 5.0,
                             ),
                             Text(
-                              '\$50',
+                              '\$60',
                               style: Appwidget.boldTextfeildStyle(),
                             ),
                           ],
@@ -143,7 +145,56 @@ class _CanteenHomeState extends State<CanteenHome> {
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            Container(
+              // margin: EdgeInsets.only(right: 5.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  child: Row(
+                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "assets/canteen/salad1.jpg",
+                        height: 160,
+                        width: 160,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                        width: 5,
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                "Macaroni\nChickpea Salad",
+                                style: Appwidget.boldTextfeildStyle(),
+                              )),
+                          Container(
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                "spicy with cheese",
+                                style: Appwidget.LightTextfeildStyle(),
+                              )),
+                          Container(
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                "\$30",
+                                style: Appwidget.boldTextfeildStyle(),
+                              ))
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
