@@ -9,8 +9,8 @@ import 'package:ui_for_college/app/controller/bloc/adminhome/bloc/adminhome_bloc
 import 'package:ui_for_college/app/controller/bloc/adminhome/bloc/adminhome_event.dart';
 import 'package:ui_for_college/app/controller/bloc/adminhome/bloc/adminhome_state.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
-import 'package:ui_for_college/app/view/Canteen/canteen_home.dart';
 import 'package:ui_for_college/app/view/bankwidgets/bottomnavigation.dart';
+import 'package:ui_for_college/app/view/canteenpage/pages/home.dart';
 import 'package:ui_for_college/app/view/hostel/hostel_page.dart';
 import 'package:ui_for_college/app/view/libraryscreen/library_home.dart';
 import 'package:ui_for_college/app/view/office/officehome.dart';
