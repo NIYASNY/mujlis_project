@@ -25,6 +25,7 @@ class _CanteenHomeState extends State<CanteenHome> {
               children: [
                 Text("Hello Admin!", style: Appwidget.boldTextfeildStyle()),
                 Container(
+                  margin: EdgeInsets.only(right: 10.0),
                   padding: EdgeInsets.all(3),
                   decoration: BoxDecoration(
                     color: Colors.black,
@@ -51,124 +52,219 @@ class _CanteenHomeState extends State<CanteenHome> {
             SizedBox(
               height: 20.0,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                //...icecream...
-                GestureDetector(
-                  onTap: () {
-                    icecream = true;
-                    pizza = false;
-                    biriyani = false;
-                    burger = false;
-                    setState(() {});
-                  },
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: icecream ? Colors.black : Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      padding: EdgeInsets.all(8),
-                      child: Image.asset(
-                        "assets/ice-cream.png",
-                        height: 50,
-                        width: 40,
-                        fit: BoxFit.cover,
-                        color: icecream ? Colors.white : Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-                //.....pizza......
-                GestureDetector(
-                  onTap: () {
-                    icecream = false;
-                    pizza = true;
-                    biriyani = false;
-                    burger = false;
-                    setState(() {});
-                  },
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: pizza ? Colors.black : Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      padding: EdgeInsets.all(8),
-                      child: Image.asset(
-                        "assets/icons8-pizza-50.png",
-                        height: 50,
-                        width: 50,
-                        fit: BoxFit.cover,
-                        color: pizza ? Colors.white : Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-
-                //....burger....//
-                GestureDetector(
-                  onTap: () {
-                    icecream = false;
-                    pizza = false;
-                    biriyani = false;
-                    burger = true;
-                    setState(() {});
-                  },
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: burger ? Colors.black : Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      padding: EdgeInsets.all(8),
-                      child: Image.asset(
-                        "assets/icons8-burger-80.png",
-                        height: 50,
-                        width: 50,
-                        fit: BoxFit.cover,
-                        color: burger ? Colors.white : Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-
-                //...biriyani...//
-                GestureDetector(
-                  onTap: () {
-                    icecream = false;
-                    pizza = false;
-                    biriyani = true;
-                    burger = false;
-                    setState(() {});
-                  },
-                  child: Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: biriyani ? Colors.black : Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      padding: EdgeInsets.all(8),
-                      child: Image.asset(
-                        "assets/biryani.png",
-                        height: 50,
-                        width: 50,
-                        fit: BoxFit.cover,
-                        color: biriyani ? Colors.white : Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+            Container(margin: EdgeInsets.only(right: 20.0), child: showItem()),
+            SizedBox(
+              height: 20.0,
             ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(4),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        padding: EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/canteen/salad1.jpg",
+                              height: 200,
+                              width: 200,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(
+                              'Veggie Patch Platter',
+                              style: Appwidget.boldTextfeildStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              'Fresh and Flavorful',
+                              style: Appwidget.LightTextfeildStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              '\$50',
+                              style: Appwidget.boldTextfeildStyle(),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 15.0,
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(4),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        padding: EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/canteen/salad1.jpg",
+                              height: 200,
+                              width: 200,
+                              fit: BoxFit.cover,
+                            ),
+                            Text(
+                              'Veggie Patch Platter',
+                              style: Appwidget.boldTextfeildStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              'Fresh and Flavorful',
+                              style: Appwidget.LightTextfeildStyle(),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Text(
+                              '\$50',
+                              style: Appwidget.boldTextfeildStyle(),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
+    );
+  }
+
+  Widget showItem() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        //...icecream...
+        GestureDetector(
+          onTap: () {
+            icecream = true;
+            pizza = false;
+            biriyani = false;
+            burger = false;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: icecream ? Colors.black : Colors.white,
+                  borderRadius: BorderRadius.circular(10)),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                "assets/ice-cream.png",
+                height: 50,
+                width: 40,
+                fit: BoxFit.cover,
+                color: icecream ? Colors.white : Colors.black,
+              ),
+            ),
+          ),
+        ),
+        //.....pizza......
+        GestureDetector(
+          onTap: () {
+            icecream = false;
+            pizza = true;
+            biriyani = false;
+            burger = false;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: pizza ? Colors.black : Colors.white,
+                  borderRadius: BorderRadius.circular(10)),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                "assets/icons8-pizza-50.png",
+                height: 50,
+                width: 50,
+                fit: BoxFit.cover,
+                color: pizza ? Colors.white : Colors.black,
+              ),
+            ),
+          ),
+        ),
+
+        //....burger....//
+        GestureDetector(
+          onTap: () {
+            icecream = false;
+            pizza = false;
+            biriyani = false;
+            burger = true;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: burger ? Colors.black : Colors.white,
+                  borderRadius: BorderRadius.circular(10)),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                "assets/icons8-burger-80.png",
+                height: 50,
+                width: 50,
+                fit: BoxFit.cover,
+                color: burger ? Colors.white : Colors.black,
+              ),
+            ),
+          ),
+        ),
+
+        //...biriyani...//
+        GestureDetector(
+          onTap: () {
+            icecream = false;
+            pizza = false;
+            biriyani = true;
+            burger = false;
+            setState(() {});
+          },
+          child: Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: biriyani ? Colors.black : Colors.white,
+                  borderRadius: BorderRadius.circular(10)),
+              padding: EdgeInsets.all(8),
+              child: Image.asset(
+                "assets/biryani.png",
+                height: 50,
+                width: 50,
+                fit: BoxFit.cover,
+                color: biriyani ? Colors.white : Colors.black,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
