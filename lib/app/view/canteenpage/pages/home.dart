@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ui_for_college/app/view/canteenpage/pages/bottomnav.dart';
 import 'package:ui_for_college/app/view/canteenpage/widgets/widget_support.dart';
 
 class CanteenHome extends StatefulWidget {
@@ -15,7 +16,6 @@ class _CanteenHomeState extends State<CanteenHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: bottomnav(),
       body: Container(
         margin: EdgeInsets.only(top: 50.0, left: 20.0, right: 10.0),
         child: Column(
