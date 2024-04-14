@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ui_for_college/app/view/canteenpage/pages/bottomnav.dart';
+import 'package:ui_for_college/app/view/canteenpage/pages/order.dart';
+import 'package:ui_for_college/app/view/canteenpage/pages/profile.dart';
+import 'package:ui_for_college/app/view/canteenpage/pages/wallet.dart';
 import 'package:ui_for_college/app/view/canteenpage/widgets/widget_support.dart';
 
 class CanteenHome extends StatefulWidget {
@@ -12,6 +15,7 @@ class CanteenHome extends StatefulWidget {
 
 class _CanteenHomeState extends State<CanteenHome> {
   bool icecream = false, pizza = false, biriyani = false, burger = false;
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -196,6 +200,41 @@ class _CanteenHomeState extends State<CanteenHome> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: CustomBottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          switch (index) {
+            case 0:
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CanteenHome()));
+              break;
+            case 1:
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => order()));
+              break;
+            case 2:
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => wallet()));
+              break;
+            case 3:
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => profile()));
+              break;
+            default:
+              break;
+          }
+          // Implement navigation based on index
+          // Example:
+          // if (index == 0) {
+          //   Navigator.pushNamed(context, '/home');
+          // } else if (index == 1) {
+          //   Navigator.pushNamed(context, '/search');
+          // } // Add more navigation routes as needed
+        },
       ),
     );
   }
