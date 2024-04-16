@@ -101,6 +101,83 @@ class _detailsState extends State<details> {
                   ),
                 )
               ],
+            ),
+            Text(
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+              style: Appwidget.LightTextfeildStyle(),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Delivary Time",
+                  style: Appwidget.LightTextfeildStyle(),
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Icon(
+                  Icons.alarm,
+                  color: Colors.black54,
+                ),
+                SizedBox(
+                  width: 5.0,
+                ),
+                Text(
+                  "30 min",
+                  style: Appwidget.boldTextfeildStyle(),
+                )
+              ],
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        "Total Price",
+                        style: Appwidget.boldTextfeildStyle(),
+                      ),
+                      Text(
+                        "\$30",
+                        style: Appwidget.HeadlineTextfeildStyle(),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width / 2,
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(color: Colors.black),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          "Add to cart",
+                          style: TextStyle(color: Colors.white, fontSize: 18.0),
+                        ),
+                        SizedBox(
+                          width: 40.0,
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(3),
+                          decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Icon(
+                            Icons.shopping_cart_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
