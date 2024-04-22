@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_for_college/app/utils/constants.dart'; // Assuming you have access to authcontroller and PrimaryColor from your constants
+import 'package:ui_for_college/app/utils/constants.dart'; 
 
 class EndDraweruser extends StatelessWidget {
   const EndDraweruser({
@@ -9,7 +9,7 @@ class EndDraweruser extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String userEmail = authcontroller.user?.email ??
-        'No Email'; // Get the user's email from the authentication controller
+        'No Email'; 
 
     return Drawer(
       child: ListView(
@@ -30,7 +30,7 @@ class EndDraweruser extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Hi User!', // You can replace this with the user's name if available
+                  'Hi User!', 
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -38,7 +38,7 @@ class EndDraweruser extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  userEmail, // Display the user's email
+                  userEmail, 
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
