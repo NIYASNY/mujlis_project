@@ -228,13 +228,6 @@ class _CanteenHomeState extends State<CanteenHome> {
             default:
               break;
           }
-          // Implement navigation based on index
-          // Example:
-          // if (index == 0) {
-          //   Navigator.pushNamed(context, '/home');
-          // } else if (index == 1) {
-          //   Navigator.pushNamed(context, '/search');
-          // } // Add more navigation routes as needed
         },
       ),
     );
