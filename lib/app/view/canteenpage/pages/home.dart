@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ui_for_college/app/view/canteenpage/pages/bottomnav.dart';
 import 'package:ui_for_college/app/view/canteenpage/pages/details.dart';
-import 'package:ui_for_college/app/view/canteenpage/pages/order.dart';
 import 'package:ui_for_college/app/view/canteenpage/pages/profile.dart';
 import 'package:ui_for_college/app/view/canteenpage/pages/wallet.dart';
 import 'package:ui_for_college/app/view/canteenpage/widgets/widget_support.dart';
