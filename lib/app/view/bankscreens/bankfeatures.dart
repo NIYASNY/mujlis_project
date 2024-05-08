@@ -32,7 +32,6 @@ class _BankFeaturesState extends State<BankFeatures> {
           ),
           child: Column(
             children: [
-              // AppBar with back button
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(

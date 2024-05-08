@@ -41,13 +41,6 @@ class BankNoltifications extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // actions: <Widget>[
-        //   IconButton(
-        //     icon: const Icon(Icons.arrow_back_ios_new),
-        //     tooltip: 'Back',
-        //     onPressed: () {},
-        //   ),
-        // ],
         title: Text(
           title,
           style: TextStyle(
