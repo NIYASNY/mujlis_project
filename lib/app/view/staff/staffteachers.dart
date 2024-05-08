@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-// Define a simple data model for staff members
 class StaffMember {
   final String id;
   final String name;
@@ -177,6 +176,7 @@ class _StaffTeachersPageState extends State<StaffTeachersPage> {
       nameController.clear();
       mobileController.clear();
       photoUrlController.clear();
+    // ignore: invalid_return_type_for_catch_error
     }).catchError((error) => print('Failed to add staff: $error'));
   }
 
