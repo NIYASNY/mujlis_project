@@ -79,6 +79,7 @@ class _BodyState extends State<Body> {
         children: [
           CircleAvatar(
             radius: 70,
+            // ignore: unnecessary_null_comparison
             backgroundImage: imageFile != null
                 ? FileImage(imageFile)
                 : AssetImage('assets/images/placeholder.jpg') as ImageProvider,
