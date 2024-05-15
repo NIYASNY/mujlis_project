@@ -3,6 +3,8 @@ import 'dart:typed_data';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
+
+//studentdatabase page
 class StudentDatabase {
   static Future<Database> _openDb() async {
     final dbPath = await getDatabasesPath();
