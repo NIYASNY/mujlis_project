@@ -105,23 +105,3 @@ class Constants {
   static Text addButtonText = const Text("Add");
   static Text updateButtonText = const Text("Update");
 }
-
-// class RoutingConstants {
-//   static String homeRouteName = 'home';
-//   static String homeRoutePath = '/';
-
-//   static String settingsRouteName = 'settings';
-//   static String settingsRoutePath = '/settings';
-
-//   static String addstudentsRouteName = 'addstudents';
-//   static String addstudentsRoutePath = '/addstudents';
-
-//   static String studentlistRouteName = 'studentlist';
-//   static String studentlistRoutePath = '/studentlist';
-  
-//   static String detailsRouteName = 'details';
-//   static String detailsRoutePath = '/details';
-  
-  
-
-// }
