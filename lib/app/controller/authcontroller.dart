@@ -5,7 +5,7 @@ import 'package:ui_for_college/app/view/widgets/adminpage.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 import 'package:ui_for_college/app/view/widgets/homepage.dart';
 
-class AuthController extends GetxController {
+class   AuthController extends GetxController {
   static AuthController get instance => Get.find();
   final Rx<User?> _user = Rx<User?>(FirebaseAuth.instance.currentUser);
   User? get user => _user.value;

@@ -12,8 +12,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Hive.registerAdapter(AdddataAdapter());
   await Hive.openBox<Add_data>("data");
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await FirebaseAuths().initNotifications();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // await FirebaseAuths().initNotifications();
   runApp(
     MyApp(),
   );
