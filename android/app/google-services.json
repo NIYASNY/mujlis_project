@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "866083465276",
-    "project_id": "finalproject-ad87d",
-    "storage_bucket": "finalproject-ad87d.appspot.com"
+    "project_number": "988669398352",
+    "project_id": "majlisproject-673df",
+    "storage_bucket": "majlisproject-673df.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:866083465276:android:3237bcb8fb4e885752fb39",
+        "mobilesdk_app_id": "1:988669398352:android:b109076f1e9b04431b3055",
         "android_client_info": {
           "package_name": "com.example.ui_for_college"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBn67dGkj7mlfUGh7EB0SAz-S1qqXNM3Jk"
+          "current_key": "AIzaSyA2FaCHih9JLR46QLVhNOfYiHjA-dL9Dbg"
         }
       ],
       "services": {
