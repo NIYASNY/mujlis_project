@@ -20,13 +20,24 @@ class _BankHomeState extends State<BankHome> {
     "Tuesday",
     "Wednesday",
     "Thursday",
-    'friday',
-    'saturday',
-    'sunday'
+    'Friday',
+    'Saturday',
+    'Sunday'
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        title: Text('Bank Home'),
+        backgroundColor: Color.fromARGB(255, 88, 81, 219),
+      ),
       body: SafeArea(
           child: ValueListenableBuilder(
               valueListenable: box.listenable(),
