@@ -10,7 +10,7 @@ int parseAmount(String amount) {
     return int.parse(amount);
   } catch (e) {
     print('Error parsing amount: $amount');
-    return 0; // Or handle the error as needed
+    return 0; 
   }
 }
 
