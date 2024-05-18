@@ -5,6 +5,8 @@ import 'package:ui_for_college/app/model/add.dart';
 import 'package:ui_for_college/app/model/bankdata/utility.dart';
 import 'package:ui_for_college/app/view/bankscreens/banknotification.dart';
 
+
+
 class BankHome extends StatefulWidget {
   const BankHome({Key? key}) : super(key: key);
 
