@@ -3,6 +3,7 @@ import 'package:ui_for_college/app/view/office/officestockpage.dart';
 import 'package:ui_for_college/app/view/staff/home/homescreen.dart';
 import 'package:ui_for_college/app/view/staff/nonstaffpage.dart';
 
+//...officehomepage....//
 class OfficeHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
