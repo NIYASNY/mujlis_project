@@ -4,6 +4,8 @@ import 'package:ui_for_college/app/view/staff/staffcook.dart';
 import 'package:ui_for_college/app/view/staff/staffsecurity.dart';
 import 'package:ui_for_college/app/view/staff/staffteachers.dart';
 
+
+//stafhomepage//
 class StaffHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
