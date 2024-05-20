@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Room class to represent each room
 class Room {
   final String name;
   final String description;
