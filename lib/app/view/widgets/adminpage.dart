@@ -18,6 +18,8 @@ import 'package:ui_for_college/app/view/staff/staffhome.dart';
 import 'package:ui_for_college/app/view/union/unionhome.dart';
 import 'package:ui_for_college/app/view/widgets/getmonth.dart';
 
+
+//adminhome
 class AdminPage extends StatefulWidget {
   const AdminPage({
     super.key,
