@@ -24,7 +24,7 @@ List<Room> rooms = [
   Room("Room 12", "ALIYA RABIA"),
 ];
 
-
+//hostel home
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
