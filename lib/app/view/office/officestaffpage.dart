@@ -20,7 +20,7 @@ class _OfficeStaffPageState extends State<OfficeStaffPage> {
   String _bio = '';
 
   bool _showInputFields =
-      true; // Flag to control the visibility of input fields
+      true; 
   File? _imageFile; // Variable to store the selected image file
 
   @override
