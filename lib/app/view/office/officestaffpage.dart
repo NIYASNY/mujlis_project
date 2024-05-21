@@ -21,7 +21,7 @@ class _OfficeStaffPageState extends State<OfficeStaffPage> {
 
   bool _showInputFields =
       true; 
-  File? _imageFile; // Variable to store the selected image file
+  File? _imageFile;
 
   @override
   void initState() {
