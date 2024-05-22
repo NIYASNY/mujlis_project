@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+//HOSTEL PAGE
 class Room {
   final String name;
   final String description;
