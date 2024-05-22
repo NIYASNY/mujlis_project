@@ -53,7 +53,7 @@ class HostelHomePage extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 10.0,
           crossAxisSpacing: 10.0,
-          childAspectRatio: 0.75, // You can adjust this aspect ratio as needed
+          childAspectRatio: 0.75,
         ),
         itemCount: rooms.length,
         itemBuilder: (context, index) {
