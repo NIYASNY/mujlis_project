@@ -59,7 +59,7 @@ class HostelHomePage extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              if (index == 0) { // Assuming Room 1 is at index 0
+              if (index == 0) {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => FirstRoomPage()),
