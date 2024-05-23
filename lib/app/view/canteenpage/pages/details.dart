@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ui_for_college/app/view/canteenpage/widgets/widget_support.dart';
 
+
+//details page
 class details extends StatefulWidget {
   const details({super.key});
 
