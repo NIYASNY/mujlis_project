@@ -6,6 +6,8 @@ import 'package:ui_for_college/app/view/canteenpage/pages/profile.dart';
 import 'package:ui_for_college/app/view/canteenpage/pages/wallet.dart';
 import 'package:ui_for_college/app/view/canteenpage/widgets/widget_support.dart';
 
+
+//canteen home
 class CanteenHome extends StatefulWidget {
   const CanteenHome({super.key});
 
