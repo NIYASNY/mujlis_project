@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:ui_for_college/app/model/add.dart';
 
+
+//bank home
 class BankAdd_Screen extends StatefulWidget {
   const BankAdd_Screen({super.key});
 
