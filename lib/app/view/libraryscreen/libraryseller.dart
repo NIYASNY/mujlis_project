@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ui_for_college/app/view/libraryscreen/librarycolor.dart';
 
+//library bestsellercell page
 class LibraryBestSellerCell extends StatelessWidget {
   final Map bObj;
   const LibraryBestSellerCell({super.key, required this.bObj});
