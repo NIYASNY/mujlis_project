@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//library colour page
 class LibraryTColor {
   static Color get primary => const Color(0xff5ABD8C);
   static Color get primaryLight => const Color(0xffAFDFC7);
