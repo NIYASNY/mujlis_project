@@ -5,7 +5,7 @@ import 'package:ui_for_college/app/utils/constants.dart';
 import 'package:ui_for_college/app/utils/widgets/form.dart';
 
 
-
+//student details page
 class StudentDetails extends StatefulWidget {
   final int index;
   const StudentDetails({super.key, required this.index});
