@@ -6,7 +6,7 @@ import 'package:ui_for_college/app/utils/widgets/form.dart';
 
 
 
-
+//add student page
 class AddStudentPage extends StatelessWidget {
   AddStudentPage({super.key});
   final AddStudentBloc addBloc = AddStudentBloc();
