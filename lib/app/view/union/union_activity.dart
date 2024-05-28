@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-
+//union activity
 class UnionActivity extends StatefulWidget {
   @override
   _NotificationPageState createState() => _NotificationPageState();
