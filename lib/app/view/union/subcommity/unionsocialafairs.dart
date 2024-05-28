@@ -5,7 +5,7 @@ import 'package:ui_for_college/app/view/union/subcommity/unionsubcommity.dart';
 
 
 
-
+//union socialaffairs page
 class UnionSocialAffairs extends StatelessWidget {
   const UnionSocialAffairs({super.key});
 
