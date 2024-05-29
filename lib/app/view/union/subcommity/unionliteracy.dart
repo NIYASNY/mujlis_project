@@ -4,7 +4,7 @@ import 'package:ui_for_college/app/view/union/subcommity/unionprd.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionsubcommity.dart';
 
 
-
+//union literary page
 class UnionLiterary extends StatelessWidget {
   const UnionLiterary({super.key});
 
