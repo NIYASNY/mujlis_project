@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/union/subcommity/uniongardern.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionsubcommity.dart';
 
-
+//union research page
 class UnionResearch extends StatelessWidget {
   const UnionResearch({super.key});
 
