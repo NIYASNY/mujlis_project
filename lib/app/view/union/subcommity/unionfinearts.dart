@@ -4,7 +4,7 @@ import 'package:ui_for_college/app/view/union/subcommity/unionstore.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionsubcommity.dart';
 
 
-
+//unionfinearts
 class Unionfinearts extends StatelessWidget {
   const Unionfinearts({super.key});
 
