@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+
+//staff cookpage
 class StaffCookPage extends StatefulWidget {
   @override
   _StaffCookPageState createState() => _StaffCookPageState();
