@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+
+//staff security page 
 class StaffSecurityPage extends StatefulWidget {
   @override
   _StaffSecurityPageState createState() => _StaffSecurityPageState();
