@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+
+//office stockpage
 class OfficeStockPage extends StatefulWidget {
   @override
   _OfficeStockPageState createState() => _OfficeStockPageState();
