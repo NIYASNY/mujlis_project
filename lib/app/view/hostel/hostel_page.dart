@@ -41,6 +41,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+//hostel hompage
 class HostelHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
