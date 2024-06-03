@@ -1,11 +1,10 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:ui_for_college/app/model/add.dart';
 import 'package:ui_for_college/app/model/bankdata/utility.dart';
 
 //chart page
+// ignore: must_be_immutable
 class Chart extends StatefulWidget {
   int indexx;
   Chart({Key? key, required this.indexx}) : super(key: key);
