@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+
+//bottom nav page
 class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
   final Function(int) onTap;
