@@ -6,8 +6,8 @@ import 'package:ui_for_college/app/model/bankdata/utility.dart';
 //chart page
 // ignore: must_be_immutable
 class Chart extends StatefulWidget {
-  int indexx;
-  Chart({Key? key, required this.indexx}) : super(key: key);
+  int index;
+  Chart({Key? key, required this.index}) : super(key: key);
 
   @override
   State<Chart> createState() => _ChartState();
@@ -19,7 +19,7 @@ class _ChartState extends State<Chart> {
   bool j = true;
   @override
   Widget build(BuildContext context) {
-    switch (widget.indexx) {
+    switch (widget.index) {
       case 0:
         a = today();
         b = true;
