@@ -96,7 +96,7 @@ class _StatisticsState extends State<Statistics> {
               ),
               SizedBox(height: 20),
               Chart(
-                indexx: index_color,
+                index: index_color,
               ),
               SizedBox(height: 20),
               Padding(
