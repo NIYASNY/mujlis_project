@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//details page
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});
 
