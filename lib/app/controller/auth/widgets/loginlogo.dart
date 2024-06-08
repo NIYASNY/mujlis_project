@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+//loginlogo page
 class LoginLogo extends StatelessWidget {
   const LoginLogo({Key? key}) : super(key: key);
 
