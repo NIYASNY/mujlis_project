@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:ui_for_college/app/controller/authcontroller.dart';
 
 
-
+//welcome page
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
