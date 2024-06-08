@@ -7,6 +7,8 @@ import 'package:ui_for_college/app/controller/auth/register.dart';
 import 'package:ui_for_college/app/controller/auth/widgets/loginlogo.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
+
+//loginscreen page
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
