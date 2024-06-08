@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+
+//registerlogo page
 class RegisterLogo extends StatelessWidget {
   const RegisterLogo({Key? key}) : super(key: key);
 
