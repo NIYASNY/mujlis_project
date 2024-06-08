@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+//squartile page
 class Squaretile extends StatelessWidget {
   final String imagepath;
   const Squaretile({super.key, required this.imagepath});
