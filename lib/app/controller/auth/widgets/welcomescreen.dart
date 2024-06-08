@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ui_for_college/app/controller/authcontroller.dart';
 
+
+
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
@@ -19,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
     _logoAnimation = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(
