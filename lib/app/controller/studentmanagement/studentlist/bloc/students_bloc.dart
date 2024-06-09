@@ -5,7 +5,7 @@ import 'package:ui_for_college/app/model/addstudent/student_database.dart';
 
 part 'students_event.dart';
 part 'students_state.dart';
-
+//student bloc
 class StudentsBloc extends Bloc<StudentsEvent, StudentsState> {
   StudentsBloc() : super(StudentsInitial()) {
    
