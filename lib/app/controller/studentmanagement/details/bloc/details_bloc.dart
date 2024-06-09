@@ -5,6 +5,7 @@ import 'package:ui_for_college/app/utils/constants.dart';
 part 'details_event.dart';
 part 'details_state.dart';
 
+//details bloc
 class DetailsBloc extends Bloc<DetailsEvent, DetailsState> {
   DetailsBloc() : super(DetailsInitial()) {
     on<DetailsInitialEvent>(detailsInitialEvent);
