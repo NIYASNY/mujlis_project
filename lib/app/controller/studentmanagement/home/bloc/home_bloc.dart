@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 part 'home_event.dart';
 part 'home_state.dart';
 
+//home
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitialState()) {
     on<HomeNavigateToAddEvent>(homeNavigateToAddEvent);
