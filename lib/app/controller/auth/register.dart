@@ -6,6 +6,7 @@ import 'package:ui_for_college/app/controller/authcontroller.dart';
 import 'package:ui_for_college/app/controller/auth/signin.dart';
 import 'package:ui_for_college/app/utils/constants.dart';
 
+//register screen
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
