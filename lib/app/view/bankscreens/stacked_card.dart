@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+//stackedcard caarousel page
 class StackedCardCarousel extends StatefulWidget {
   StackedCardCarousel({
     required List<Widget> items,
