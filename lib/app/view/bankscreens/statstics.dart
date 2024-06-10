@@ -6,6 +6,7 @@ import 'package:ui_for_college/app/model/add.dart';
 import 'package:ui_for_college/app/model/bankdata/utility.dart';
 import 'package:ui_for_college/app/view/bankwidgets/chart.dart';
 
+//statstics page
 class Statistics extends StatefulWidget {
   const Statistics({Key? key}) : super(key: key);
 
