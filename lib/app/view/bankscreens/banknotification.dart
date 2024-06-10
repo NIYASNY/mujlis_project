@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/bankscreens/stacked_card.dart';
 
 //bank notification
-class BankNoltifications extends StatelessWidget {
-  BankNoltifications({super.key, required this.title});
+class BankNotifications extends StatelessWidget {
+  BankNotifications({super.key, required this.title});
   final String title;
 
   final List<Widget> fancyCards = <Widget>[
