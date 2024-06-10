@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/bankscreens/stacked_card.dart';
 
+//bank notification
 class BankNoltifications extends StatelessWidget {
   BankNoltifications({super.key, required this.title});
   final String title;
