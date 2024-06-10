@@ -154,7 +154,7 @@ class _BankHomeState extends State<BankHome> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => BankNoltifications(
+                              builder: (context) => BankNotifications(
                                     title: '',
                                   )));
                         },
