@@ -4,6 +4,7 @@ import 'package:ui_for_college/app/view/bankscreens/bankfeatures.dart';
 import 'package:ui_for_college/app/view/bankscreens/bankhome.dart';
 import 'package:ui_for_college/app/view/bankscreens/statstics.dart';
 
+//bottom nav
 class BankBottom extends StatefulWidget {
   const BankBottom({Key? key}) : super(key: key);
 
