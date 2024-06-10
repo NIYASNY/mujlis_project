@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/bankscreens/bankcards.dart';
 
+//bank features
 class BankFeatures extends StatefulWidget {
   const BankFeatures({Key? key, required this.title}) : super(key: key);
 
