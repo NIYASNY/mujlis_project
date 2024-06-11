@@ -8,6 +8,7 @@ import 'package:ui_for_college/app/view/union/subcommity/unionsocialafairs.dart'
 import 'package:ui_for_college/app/view/union/subcommity/unionsports.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionstore.dart';
 
+//union subcommitte page
 class UnionSubcommittee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
