@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//wallett page
 class wallet extends StatefulWidget {
   const wallet({super.key});
 
