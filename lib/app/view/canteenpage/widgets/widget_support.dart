@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//canteen widgets
 class Appwidget {
   static TextStyle boldTextfeildStyle() {
     return TextStyle(
