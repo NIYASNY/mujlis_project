@@ -15,7 +15,7 @@ class _StaffSecurityPageState extends State<StaffSecurityPage> {
    String _name = '';
    String _contact = '';
   bool _showInputFields =
-      true; // Flag to control the visibility of input fields
+      true; 
 
   @override
   void initState() {
