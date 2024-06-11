@@ -1,6 +1,8 @@
 import 'package:hive/hive.dart';
 import 'package:ui_for_college/app/model/add.dart';
 
+
+//utility page
 int totals = 0;
 
 final box = Hive.box<Add_data>('data');
