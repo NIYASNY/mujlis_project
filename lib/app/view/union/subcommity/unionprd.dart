@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionsocialafairs.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionsubcommity.dart';
 
+
+//union period page
 class UnionPrd extends StatelessWidget {
   const UnionPrd({super.key});
 
