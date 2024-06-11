@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ui_for_college/app/controller/authcontroller.dart';
 
+
+//contants page
 const PrimaryColor = Colors.black;
 final firebaseAuth = FirebaseAuth.instance;
 final firestore = FirebaseFirestore.instance;
