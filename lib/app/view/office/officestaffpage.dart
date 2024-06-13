@@ -15,9 +15,6 @@ class _OfficeStaffPageState extends State<OfficeStaffPage> {
   late TextEditingController _nameController;
   late TextEditingController _bioController;
 
-  // late String _name;
-  // late String _bio;
-
   String _name = '';
   String _bio = '';
 
