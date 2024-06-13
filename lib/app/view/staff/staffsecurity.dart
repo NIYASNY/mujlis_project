@@ -64,7 +64,7 @@ class _StaffSecurityPageState extends State<StaffSecurityPage> {
       // After saving, reload the data from Firestore
       _loadDataFromFirestore();
       setState(() {
-        _showInputFields = false; // Hide input fields after saving
+        _showInputFields = false; 
       });
     } catch (e) {
       print('Error saving data: $e');
