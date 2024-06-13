@@ -7,6 +7,7 @@ import 'package:ui_for_college/app/controller/studentmanagement/studentlist/bloc
 import 'package:ui_for_college/app/utils/constants.dart';
 import 'package:ui_for_college/app/view/staff/detailstudent/details.dart';
 
+//studentspage
 class StudentsPage extends StatefulWidget {
   const StudentsPage({super.key});
 
