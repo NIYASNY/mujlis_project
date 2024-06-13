@@ -35,8 +35,6 @@ class _StudentsPageState extends State<StudentsPage> {
               MaterialPageRoute(
                   builder: (context) => StudentDetails(
                       index: state.index)));
-          // GoRouter.of(context).pushNamed(RoutingConstants.detailsRouteName,
-          //     pathParameters: {'index': state.index.toString()});
         } else if (state is StudentDeletedActionState) {
           studentsBloc.add(StudentsInitialEvent());
           GoRouter.of(context).pop(true);
