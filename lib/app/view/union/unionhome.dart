@@ -76,7 +76,6 @@ class _UnionExecutiveCommitteeState extends State<unionHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Display Executive Committee members from Firestore
             StreamBuilder(
               stream: FirebaseFirestore.instance
                   .collection('executive_committee')
