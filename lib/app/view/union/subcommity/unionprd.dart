@@ -5,8 +5,8 @@ import 'package:ui_for_college/app/view/union/subcommity/unionsubcommity.dart';
 
 
 //union period page
-class UnionPrd extends StatelessWidget {
-  const UnionPrd({super.key});
+class UnionPeriod extends StatelessWidget {
+  const UnionPeriod({super.key});
 
   @override
   Widget build(BuildContext context) {
