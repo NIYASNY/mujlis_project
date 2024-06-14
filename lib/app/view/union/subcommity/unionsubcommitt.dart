@@ -82,7 +82,7 @@ class UnionSubcommittee extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => UnionPrd(),
+                    builder: (context) => UnionPeriod(),
                   ),
                 );
               },
