@@ -8,7 +8,6 @@ import 'package:ui_for_college/app/view/union/subcommity/unionsocialafairs.dart'
 import 'package:ui_for_college/app/view/union/subcommity/unionsports.dart';
 import 'package:ui_for_college/app/view/union/subcommity/unionstore.dart';
 
-
 //union subcommitty page
 class UnionSubcommittee extends StatelessWidget {
  @override
