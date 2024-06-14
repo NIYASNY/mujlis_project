@@ -13,7 +13,7 @@ class _NotificationPageState extends State<UnionActivity> {
 
   Future<void> _pickImage(ImageSource source) async {
   final picker = ImagePicker();
-  final pickedFile = await picker.pickImage(source: source); // Use pickImage instead of getImage
+  final pickedFile = await picker.pickImage(source: source); 
 
   if (pickedFile != null) {
     File image = File(pickedFile.path);
