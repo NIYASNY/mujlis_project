@@ -17,7 +17,6 @@ import 'package:ui_for_college/app/view/staff/staffhome.dart';
 import 'package:ui_for_college/app/view/union/unionhome.dart';
 import 'package:ui_for_college/app/view/widgets/getmonth.dart';
 
-
 class AdminPage extends StatefulWidget {
   const AdminPage({
     super.key,
@@ -36,7 +35,8 @@ class _AdminPageState extends State<AdminPage> {
 
   final adminPageBloc = AdminPageBloc();
   int index = 1;
-  bool showText = false;
+  bool showText1 = false;
+  bool showText2 = false;
   bool showFeatures = false;
 
   @override
@@ -48,9 +48,13 @@ class _AdminPageState extends State<AdminPage> {
   void _startAnimation() async {
     await Future.delayed(Duration(seconds: 2));
     setState(() {
-      showText = true;
+      showText1 = true;
     });
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
+    setState(() {
+      showText2 = true;
+    });
+    await Future.delayed(Duration(seconds: 1));
     setState(() {
       showFeatures = true;
     });
@@ -135,7 +139,7 @@ class _AdminPageState extends State<AdminPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     AnimatedOpacity(
-                                      opacity: showText ? 1.0 : 0.0,
+                                      opacity: showText1 ? 1.0 : 0.0,
                                       duration: Duration(seconds: 1),
                                       child: Text(
                                         'Hi, Admin!',
@@ -146,7 +150,7 @@ class _AdminPageState extends State<AdminPage> {
                                       ),
                                     ),
                                     AnimatedOpacity(
-                                      opacity: showText ? 1.0 : 0.0,
+                                      opacity: showText2 ? 1.0 : 0.0,
                                       duration: Duration(seconds: 1),
                                       child: Text(
                                         "${DateTime.now().day} ${getMonth(DateTime.now().month)} ${DateTime.now().year}",
@@ -172,7 +176,7 @@ class _AdminPageState extends State<AdminPage> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: 50),
                           AnimatedOpacity(
                             opacity: showFeatures ? 1.0 : 0.0,
                             duration: Duration(seconds: 1),
@@ -310,4 +314,3 @@ class _AdminPageState extends State<AdminPage> {
     );
   }
 }
-
