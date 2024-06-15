@@ -19,8 +19,8 @@ import 'package:ui_for_college/app/view/widgets/getmonth.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<AdminPage> createState() => _AdminPageState();
@@ -108,8 +108,8 @@ class _AdminPageState extends State<AdminPage> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.blue.shade900,
-                      Colors.blue.shade700
+                      Color(0xFF0088FF), // Blue color
+                      Color(0xFF00FF88), // Green color
                     ], // Dark and light blue gradient
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,

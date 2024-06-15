@@ -41,46 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA8ntG4wztOSaKzpqC6T7tKGbSb3mMmG3E',
-    appId: '1:988669398352:web:a9d28f7a7bb75ba81b3055',
-    messagingSenderId: '988669398352',
-    projectId: 'majlisproject-673df',
-    authDomain: 'majlisproject-673df.firebaseapp.com',
-    storageBucket: 'majlisproject-673df.appspot.com',
+    apiKey: 'AIzaSyCCZEfrcSikPVarTBFKEn9ufJ5Mqgdk5jo',
+    appId: '1:601940301010:web:b593fee3635d687f82890b',
+    messagingSenderId: '601940301010',
+    projectId: 'freelance-college',
+    authDomain: 'freelance-college.firebaseapp.com',
+    storageBucket: 'freelance-college.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA2FaCHih9JLR46QLVhNOfYiHjA-dL9Dbg',
-    appId: '1:988669398352:android:b109076f1e9b04431b3055',
-    messagingSenderId: '988669398352',
-    projectId: 'majlisproject-673df',
-    storageBucket: 'majlisproject-673df.appspot.com',
+    apiKey: 'AIzaSyBonLNwYbx3eMrRdoaRjTAxO35oDaW6NJA',
+    appId: '1:601940301010:android:2de5ed113c9734c382890b',
+    messagingSenderId: '601940301010',
+    projectId: 'freelance-college',
+    storageBucket: 'freelance-college.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCMzKKHRMSitlFHyqkesZvG4145vtwfh4A',
-    appId: '1:988669398352:ios:06988c9df292360b1b3055',
-    messagingSenderId: '988669398352',
-    projectId: 'majlisproject-673df',
-    storageBucket: 'majlisproject-673df.appspot.com',
+    apiKey: 'AIzaSyAIkhNdn8fkQYmJ6xhFhBFZztac78AVRPo',
+    appId: '1:601940301010:ios:0acf621ef8aee77682890b',
+    messagingSenderId: '601940301010',
+    projectId: 'freelance-college',
+    storageBucket: 'freelance-college.appspot.com',
     iosBundleId: 'com.example.uiForCollege',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCMzKKHRMSitlFHyqkesZvG4145vtwfh4A',
-    appId: '1:988669398352:ios:06988c9df292360b1b3055',
-    messagingSenderId: '988669398352',
-    projectId: 'majlisproject-673df',
-    storageBucket: 'majlisproject-673df.appspot.com',
+    apiKey: 'AIzaSyAIkhNdn8fkQYmJ6xhFhBFZztac78AVRPo',
+    appId: '1:601940301010:ios:0acf621ef8aee77682890b',
+    messagingSenderId: '601940301010',
+    projectId: 'freelance-college',
+    storageBucket: 'freelance-college.appspot.com',
     iosBundleId: 'com.example.uiForCollege',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyA8ntG4wztOSaKzpqC6T7tKGbSb3mMmG3E',
-    appId: '1:988669398352:web:c4653578361a65881b3055',
-    messagingSenderId: '988669398352',
-    projectId: 'majlisproject-673df',
-    authDomain: 'majlisproject-673df.firebaseapp.com',
-    storageBucket: 'majlisproject-673df.appspot.com',
+    apiKey: 'AIzaSyCCZEfrcSikPVarTBFKEn9ufJ5Mqgdk5jo',
+    appId: '1:601940301010:web:bd640b629f7d8e8782890b',
+    messagingSenderId: '601940301010',
+    projectId: 'freelance-college',
+    authDomain: 'freelance-college.firebaseapp.com',
+    storageBucket: 'freelance-college.appspot.com',
   );
+
 }
