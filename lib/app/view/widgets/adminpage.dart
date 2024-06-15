@@ -169,8 +169,8 @@ class _AdminPageState extends State<AdminPage> {
                                   },
                                   child: CircleAvatar(
                                     radius: 20, // Adjust the radius as needed
-                                    backgroundImage: AssetImage(
-                                        'assets/admin.png'), // Replace 'assets/profile_image.png' with the path to your profile image
+                                    backgroundImage:
+                                        AssetImage('assets/admin.png'),
                                   ),
                                 ),
                               ],
