@@ -46,6 +46,7 @@ class _AdminPageState extends State<AdminPage> {
     _startAnimation();
   }
 
+
   void _startAnimation() async {
     await Future.delayed(Duration(seconds: 2));
     setState(() {
