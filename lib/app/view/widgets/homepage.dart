@@ -215,7 +215,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
 Widget _buildSquare(
   String imagepath,
   String title,
