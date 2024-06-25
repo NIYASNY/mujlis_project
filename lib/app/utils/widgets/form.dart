@@ -10,6 +10,7 @@ import '../constants.dart';
 // ignore: must_be_immutable
 
 //custom formpage
+// ignore: must_be_immutable
 class CustomFormWidget extends StatelessWidget {
   var bloc;
   var image;
