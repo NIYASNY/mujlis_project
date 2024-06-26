@@ -10,6 +10,7 @@ import 'package:ui_for_college/app/view/bankscreens/banknotification.dart';
 class BankHome extends StatefulWidget {
   const BankHome({Key? key}) : super(key: key);
 
+
   @override
   State<BankHome> createState() => _BankHomeState();
 }
