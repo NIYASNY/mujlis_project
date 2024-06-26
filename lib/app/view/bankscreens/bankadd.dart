@@ -7,6 +7,7 @@ import 'package:ui_for_college/app/model/add.dart';
 class BankAdd_Screen extends StatefulWidget {
   const BankAdd_Screen({super.key});
 
+
   @override
   State<BankAdd_Screen> createState() => _BankAdd_ScreenState();
 }
