@@ -11,6 +11,7 @@ class MyCard extends StatelessWidget {
 
   var decoration;
 
+
   MyCard(
       {Key? key,
       required this.balance,
