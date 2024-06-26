@@ -10,6 +10,7 @@ import 'package:ui_for_college/app/view/bankscreens/stacked_card.dart';
 class BankNotifications extends StatelessWidget {
   BankNotifications({super.key, required this.title});
   final String title;
+  
 
   final List<Widget> fancyCards = <Widget>[
     FancyCard(
