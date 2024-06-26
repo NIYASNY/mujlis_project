@@ -10,6 +10,7 @@ import 'package:ui_for_college/app/view/bankwidgets/chart.dart';
 class Statistics extends StatefulWidget {
   const Statistics({Key? key}) : super(key: key);
 
+
   @override
   State<Statistics> createState() => _StatisticsState();
 }
