@@ -22,6 +22,7 @@ class StackedCardCarousel extends StatefulWidget {
         _pageController = pageController ?? _defaultPageController,
         _onPageChanged = onPageChanged;
 
+
   final List<Widget> _items;
   final StackedCardCarouselType _type;
   final double _initialOffset;
