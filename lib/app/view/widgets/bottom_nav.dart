@@ -12,7 +12,6 @@ class BottomNavbar extends StatefulWidget {
   State<BottomNavbar> createState() => _BottomNavbarState();
 }
 
-
 class _BottomNavbarState extends State<BottomNavbar> {
   int myindex = 0;
   List<Widget> icons = [
