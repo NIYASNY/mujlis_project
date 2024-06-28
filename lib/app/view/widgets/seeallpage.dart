@@ -47,6 +47,7 @@ class _SeeallState extends State<Seeall> {
                   ),
                 ],
               ),
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
