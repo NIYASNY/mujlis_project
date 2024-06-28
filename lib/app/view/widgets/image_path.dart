@@ -5,4 +5,5 @@ class AssetImagepath {
    static String kApple = 'assets/apple.png';
   static String kGoogle = 'assets/google.png';
   static String kFacebook = 'assets/facebook.png';
+  
 }
