@@ -15,6 +15,7 @@ class Assetfolder extends StatelessWidget {
       child: Image.asset(
         imageside,
         height: 35,
+        
       ),
     );
   }
