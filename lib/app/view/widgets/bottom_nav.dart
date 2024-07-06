@@ -36,7 +36,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
           letIndexChange: (index) => true,
             backgroundColor: Colors.transparent,
             animationDuration:
-                const Duration(milliseconds: 300), //default is 600
+                const Duration(milliseconds: 300),
             onTap: (index) {
               setState(
                 () {
