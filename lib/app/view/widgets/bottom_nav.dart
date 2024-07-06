@@ -37,7 +37,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
             backgroundColor: Colors.transparent,
             animationDuration:
                 const Duration(milliseconds: 300), //default is 600
-            // color: Appcolor.primaryColor,
             onTap: (index) {
               setState(
                 () {
