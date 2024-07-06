@@ -35,8 +35,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
         child: CurvedNavigationBar(
           letIndexChange: (index) => true,
             backgroundColor: Colors.transparent,
-            // backgroundColor: Appcolor.tertiaryColor,
-            // buttonBackgroundColor: Appcolor.primaryColor,
             animationDuration:
                 const Duration(milliseconds: 300), //default is 600
             // color: Appcolor.primaryColor,
