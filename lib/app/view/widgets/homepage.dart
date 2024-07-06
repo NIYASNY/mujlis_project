@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                                     child: CircleAvatar(
                                       radius: 20, // Adjust the radius as needed
                                       backgroundImage: AssetImage(
-                                          'assets/user.jpg'), // Replace 'assets/profile_image.png' with the path to your profile image
+                                          'assets/user.jpg'), 
                                     ),
                                   ),
                                 ],
