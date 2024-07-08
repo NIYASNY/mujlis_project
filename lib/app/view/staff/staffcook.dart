@@ -13,7 +13,7 @@ class _StaffCookPageState extends State<StaffCookPage> {
 
    String _name = '';
    String _contact = '';
-  bool _showInputFields = true; // Flag to control the visibility of input fields
+  bool _showInputFields = true; 
 
   @override
   void initState() {
