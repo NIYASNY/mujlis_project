@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                                       Get.off(() => EndDraweradmin());
                                     },
                                     child: CircleAvatar(
-                                      radius: 20, // Adjust the radius as needed
+                                      radius: 20, 
                                       backgroundImage: AssetImage(
                                           'assets/user.jpg'), 
                                     ),
